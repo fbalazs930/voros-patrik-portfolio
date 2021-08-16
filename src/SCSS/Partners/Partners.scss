@@ -1,3 +1,29 @@
-.partners{
-    
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    .cegek {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20rem;
+        margin: 1rem 0 0 0;
+        .ceg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &:nth-child(2){
+                position: relative;
+                left:70px;
+            }
+        }
+        img {
+            height: 6rem;
+            width: auto;
+            object-fit: contain;
+        }
+    }
 }

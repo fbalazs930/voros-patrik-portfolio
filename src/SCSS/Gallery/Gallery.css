@@ -64,6 +64,8 @@
   background: rgba(15, 15, 15, 0.787);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: left 1s;
+  transition: left 1s;
 }
 
 .gallery .full-image img {
@@ -71,6 +73,9 @@
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+  position: relative;
 }
 
 .gallery .full-image img:hover {

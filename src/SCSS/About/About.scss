@@ -1,3 +1,25 @@
-.about{
-    
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 85vw;
+    margin: auto;
+    .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        .text{
+            p{
+                margin:0 0 .75rem 0;
+                font-weight: bold;
+            }
+        }
+        .own-portriat {
+            width: 20rem;
+            height: auto;
+            object-fit: contain;
+        }
+    }
 }

@@ -9,9 +9,12 @@ export const Portraits = () => {
         setClick(false);
     }
 
+
     const updateId = e => {
         if (e.keyCode === 27) { exit() }
-        if (e.keyCode === 37) { if (id - 1 >= 0) { setId(id - 1) } }
+        if (e.keyCode === 37) { if (id - 1 >= 0) { 
+            setId(id - 1) ;
+        } }
         if (e.keyCode === 39) {
             if (id + 1 <= Images.portraits.length - 1) {
                 setId(id + 1);
