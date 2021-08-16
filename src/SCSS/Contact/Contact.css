@@ -1,0 +1,20 @@
+.contact {
+  background: #000;
+  min-height: 20vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fafafa;
+}
+
+.contact .logos {
+  text-align: center;
+}
+
+.contact .logos i {
+  width: 12rem;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+/*# sourceMappingURL=Contact.css.map */

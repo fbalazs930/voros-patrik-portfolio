@@ -1,0 +1,15 @@
+.contact {
+    background: #000;
+    min-height: 20vh;
+    display: grid;
+    place-items: center;
+    color:#fafafa;
+    .logos {
+        text-align: center;
+        i {
+            width: 12rem;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}

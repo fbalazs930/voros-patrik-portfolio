@@ -1,45 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.logo {
-  background: #000;
-  min-height: 20vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-.logo .logo-img {
-  width: 12rem;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.contact {
-  background: #000;
-  min-height: 20vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  color: #fafafa;
-}
-
-.contact .logos {
-  text-align: center;
-}
-
-.contact .logos i {
-  width: 12rem;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .gallery {
   background: #000;
   margin: auto;
@@ -86,4 +44,4 @@
   height: auto;
   margin: 0 0.5rem;
 }
-/*# sourceMappingURL=Main.css.map */
+/*# sourceMappingURL=Gallery.css.map */
