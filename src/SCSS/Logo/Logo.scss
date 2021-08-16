@@ -1,10 +1,10 @@
 .logo {
-    background: #000;
+    background: var(--black);
     min-height: 20vh;
     display: grid;
     place-items: center;
     .logo-img {
-        width: 12rem;
+        width: 10rem;
         height: auto;
         object-fit: contain;
     }

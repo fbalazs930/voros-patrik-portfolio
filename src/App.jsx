@@ -1,8 +1,8 @@
+import './SCSS/Main.css';
 import { About } from './components/About';
 import { Gallery } from './components/Gallery/Gallery';
 import { Contact } from './components/Contact';
 import { Logo } from './components/Logo';
-import './SCSS/Main.css';
 import { Socials } from './components/Socials';
 import { Partners } from './components/Partners';
 

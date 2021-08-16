@@ -1,10 +1,14 @@
 .contact {
-  background: #000;
-  min-height: 20vh;
+  min-height: 25vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
   color: #fafafa;
+  padding: 1rem 0;
+}
+
+.contact h1 {
+  font-size: 1.5rem;
 }
 
 .contact .logos {
@@ -12,9 +16,8 @@
 }
 
 .contact .logos i {
-  width: 12rem;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Contact.css.map */

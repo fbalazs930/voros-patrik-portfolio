@@ -1,15 +1,18 @@
 .contact {
-    background: #000;
-    min-height: 20vh;
+    min-height: 25vh;
     display: grid;
     place-items: center;
     color:#fafafa;
+    padding:1rem 0;
+    h1{
+        font-size: 1.5rem;
+    }
     .logos {
         text-align: center;
         i {
-            width: 12rem;
-            height: auto;
-            object-fit: contain;
+            font-size: 2.5rem;
+            padding:0 1rem;
+            cursor: pointer;
         }
     }
 }
