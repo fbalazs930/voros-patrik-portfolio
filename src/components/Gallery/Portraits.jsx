@@ -9,7 +9,7 @@ export const Portraits = () => {
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
     const clickHandler = (id) => {
-        setClick(true);
+        setClick(!click);
         setId(id);
     }
     const exit = () => {
@@ -19,26 +19,27 @@ export const Portraits = () => {
     }
     useEffect(() => {
         window.addEventListener('keyup', exit);
-        return () => { window.removeEventListener('keyup', exit); }
+        return () => { window.removeEventListener('keyup', exit) }
     }, [])
+    window.addEventListener('click', (e) => {
+        console.log(e.target.className);
+    });
     return (
         <div className='portraits'>
             <h1>Portréfotók</h1>
             <div className="images">
                 {images.map(img => (
-                    <img key={img.id} src={img.src} alt="Étel" onClick={() => clickHandler(img.id)} />
+                    <img key={img.id} src={img.src} alt="portré" onClick={() => clickHandler(img.id)} />
                 ))}
             </div>
 
-            {click === true &&
-                <Carousel className="carousel" emulateTouch autoPlay interval="4000" useKeyboardArrows stopOnHover selectedItem={id}>
-                    {images.map(img => (
-                        <div key={img.id}>
-                            <img src={img.src} alt="portré" />
-                        </div>
-                    ))}
-                </Carousel>
-            }
+
+            {click ? <Carousel emulateTouch infiniteLoop autoPlay interval="5000" useKeyboardArrows stopOnHover selectedItem={id}>
+                {images.map(img => (
+                    <img key={img.id} className="img" src={img.src} alt="portré" onClick={()=>{console.log("helo")}} />
+                ))}
+            </Carousel> : null}
+
         </div>
     )
 }

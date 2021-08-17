@@ -1,32 +1,80 @@
 .gallery {
-    margin: auto;
-    color: #fafafa;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
+    margin: auto;
     h1 {
         margin: 0 0 1.5rem 0;
     }
     div {
         padding: 1.5rem 0;
-        display: flex;
-        flex-direction: column;
     }
     .images {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
     }
     img {
-        width: 12rem;
+        z-index: 30;
+        width: clamp(10rem, 15vw, 12rem);
         height: auto;
-        margin: 0 0.75rem;
+        margin: 0.75rem;
         transition: all 0.3s;
         cursor: pointer;
         &:hover {
             transform: scale(1.1);
             transition: all 0.3s;
+        }
+    }
+    .carousel-root {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(20, 20, 20, 0.842);
+        .carousel {
+            display: none;
+        }
+        .carousel-slider {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: red;
+            .slider-wrapper {
+                padding: 0;
+                background: yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img {
+                    height: 90vh;
+                    width: auto;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+        }
+        .slider .animated {
+            display: none;
+        }
+
+        .carousel-status,
+        .control-dots,
+        .thumbs-wrapper {
+            display: none;
         }
     }
 }

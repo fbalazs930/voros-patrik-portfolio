@@ -14,16 +14,13 @@
   --white: #d9d9d9;
 }
 
-div {
-  background-color: var(--black);
-}
-
 .App {
+  background: var(--black);
   overflow-x: hidden;
+  color: #fafafa;
 }
 
 .logo {
-  background: var(--black);
   min-height: 20vh;
   display: -ms-grid;
   display: grid;
@@ -61,12 +58,21 @@ div {
 }
 
 .gallery {
-  margin: auto;
-  color: #fafafa;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
 }
 
 .gallery h1 {
@@ -75,13 +81,6 @@ div {
 
 .gallery div {
   padding: 1.5rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .gallery .images {
@@ -92,18 +91,22 @@ div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
 }
 
 .gallery img {
-  width: 12rem;
+  z-index: 30;
+  width: clamp(10rem, 15vw, 12rem);
   height: auto;
-  margin: 0 0.75rem;
+  margin: 0.75rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
@@ -114,6 +117,77 @@ div {
           transform: scale(1.1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.gallery .carousel-root {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(20, 20, 20, 0.842);
+}
+
+.gallery .carousel-root .carousel {
+  display: none;
+}
+
+.gallery .carousel-root .carousel-slider {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: red;
+}
+
+.gallery .carousel-root .carousel-slider .slider-wrapper {
+  padding: 0;
+  background: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery .carousel-root .carousel-slider .slider-wrapper .img {
+  height: 90vh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.gallery .carousel-root .slider .animated {
+  display: none;
+}
+
+.gallery .carousel-root .carousel-status,
+.gallery .carousel-root .control-dots,
+.gallery .carousel-root .thumbs-wrapper {
+  display: none;
 }
 
 .about {
@@ -234,36 +308,5 @@ div {
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.carousel {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(24, 24, 24, 0.89);
-}
-
-.carousel .carousel-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.carousel div {
-  background: transparent;
-}
-
-.carousel div img {
-  height: 90vh;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.carousel .control-dots,
-.carousel .carousel-status,
-.carousel .thumbs-wrapper {
-  display: none;
 }
 /*# sourceMappingURL=Main.css.map */
