@@ -30,13 +30,21 @@ export const Events = () => {
                 ))}
             </div>
 
+            <div className="mobile-images">
+                <Carousel emulateTouch infiniteLoop autoPlay interval="10000" useKeyboardArrows stopOnHover selectedItem={id}>
+                    {images.map(img => (
+                        <img key={img.id} className="img" src={img.src} alt="esemény" />
+                    ))}
+                </Carousel>
+            </div>
+
             {click ? <>
                 <Carousel emulateTouch infiniteLoop autoPlay interval="10000" useKeyboardArrows stopOnHover selectedItem={id}>
                     {images.map(img => (
                         <img key={img.id} className="img" src={img.src} alt="esemény" />
                     ))}
                 </Carousel>
-                <i className="fas fa-times" onClick={()=>setClick(false)}></i>
+                <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
         </div>
     )

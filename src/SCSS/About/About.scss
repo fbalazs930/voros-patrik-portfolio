@@ -10,6 +10,11 @@
         justify-content: center;
         align-items: center;
         gap: 3rem;
+        padding:3rem 0;
+        @media only screen and (max-width:755px){
+            flex-direction: column;
+            gap:2rem;
+        }
         .text{
             p{
                 margin:0 0 .75rem 0;
@@ -17,7 +22,10 @@
             }
         }
         .own-portriat {
-            width: 20rem;
+            width: clamp(15rem, 20vw, 40rem);
+            @media only screen and (max-width:755px){
+                width: clamp(17rem, 25vw, 45rem);
+            }
             height: auto;
             object-fit: contain;
         }
