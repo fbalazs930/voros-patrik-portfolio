@@ -21,9 +21,6 @@ export const Portraits = () => {
         window.addEventListener('keyup', exit);
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
-    window.addEventListener('click', (e) => {
-        console.log(e.target.className);
-    });
     return (
         <div className='portraits'>
             <h1>Portréfotók</h1>
@@ -34,9 +31,9 @@ export const Portraits = () => {
             </div>
 
 
-            {click ? <Carousel emulateTouch infiniteLoop autoPlay interval="5000" useKeyboardArrows stopOnHover selectedItem={id}>
+            {click ? <Carousel emulateTouch infiniteLoop autoPlay interval="10000" useKeyboardArrows stopOnHover selectedItem={id}>
                 {images.map(img => (
-                    <img key={img.id} className="img" src={img.src} alt="portré" onClick={()=>{console.log("helo")}} />
+                    <img key={img.id} className="img" src={img.src} alt="portré" />
                 ))}
             </Carousel> : null}
 
