@@ -56,7 +56,63 @@ div {
   cursor: pointer;
 }
 
-.portraits .carousel {
+.gallery {
+  margin: auto;
+  color: #fafafa;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.gallery h1 {
+  margin: 0 0 1.5rem 0;
+}
+
+.gallery div {
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery img {
+  width: 12rem;
+  height: auto;
+  margin: 0 0.75rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gallery .portraits .carousel {
   height: 100vh;
   position: fixed;
   top: 0;
@@ -65,24 +121,25 @@ div {
   background: rgba(24, 24, 24, 0.89);
 }
 
-.portraits .carousel .carousel-slider {
+.gallery .portraits .carousel .carousel-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.portraits .carousel div {
+.gallery .portraits .carousel div {
   background: transparent;
 }
 
-.portraits .carousel div img {
+.gallery .portraits .carousel div img {
   height: 90vh;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.portraits .carousel .control-dots, .portraits .carousel .carousel-status {
+.gallery .portraits .carousel .control-dots,
+.gallery .portraits .carousel .carousel-status {
   display: none;
 }
 

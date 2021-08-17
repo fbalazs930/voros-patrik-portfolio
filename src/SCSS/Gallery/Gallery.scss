@@ -1,24 +1,58 @@
-.portraits {
-    .carousel {
-        height: 100vh;
-        position: fixed;
-        top:0;
-        left:0;
-        overflow: hidden;
-        background: rgba(24, 24, 24, 0.89);
-        .carousel-slider{
-            display: flex;
+.gallery {
+    margin: auto;
+    color: #fafafa;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    h1 {
+        margin: 0 0 1.5rem 0;
+    }
+    div {
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 12rem;
+        height: auto;
+        margin: 0 0.75rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.3s;
         }
-        div {
-            background: transparent;
-            img {
-                height: 90vh;
-                width: auto;
-                object-fit: contain;
+    }
+
+    .portraits {
+        .carousel {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background: rgba(24, 24, 24, 0.89);
+            .carousel-slider {
+                display: flex;
             }
-        }
-        .control-dots, .carousel-status{
-            display: none;
+            div {
+                background: transparent;
+                img {
+                    height: 90vh;
+                    width: auto;
+                    object-fit: contain;
+                }
+            }
+            .control-dots,
+            .carousel-status {
+                display: none;
+            }
         }
     }
 }
