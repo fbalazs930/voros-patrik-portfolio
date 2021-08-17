@@ -28,7 +28,8 @@
 }
 
 .logo .logo-img {
-  width: 10rem;
+  padding: 2rem 0 0 0;
+  width: 17rem;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -44,7 +45,7 @@
 }
 
 .contact h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact .logos {
@@ -120,7 +121,7 @@
 }
 
 .gallery .carousel-root {
-  z-index: 100;
+  z-index: 40;
   position: fixed;
   top: 0;
   left: 0;
@@ -186,6 +187,25 @@
 .gallery .carousel-root .control-dots,
 .gallery .carousel-root .thumbs-wrapper {
   display: none;
+}
+
+.gallery .fa-times {
+  color: #858585;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.75rem;
+  font-size: 1.3rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.gallery .fa-times:hover {
+  color: #d3d3d3;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .about {

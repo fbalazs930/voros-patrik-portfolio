@@ -6,7 +6,8 @@
 }
 
 .logo .logo-img {
-  width: 10rem;
+  padding: 2rem 0 0 0;
+  width: 17rem;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
