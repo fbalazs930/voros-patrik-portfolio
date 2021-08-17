@@ -18,6 +18,10 @@ div {
   background-color: var(--black);
 }
 
+.App {
+  overflow-x: hidden;
+}
+
 .logo {
   background: var(--black);
   min-height: 20vh;
@@ -110,37 +114,6 @@ div {
           transform: scale(1.1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.gallery .portraits .carousel {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background: rgba(24, 24, 24, 0.89);
-}
-
-.gallery .portraits .carousel .carousel-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gallery .portraits .carousel div {
-  background: transparent;
-}
-
-.gallery .portraits .carousel div img {
-  height: 90vh;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.gallery .portraits .carousel .control-dots,
-.gallery .portraits .carousel .carousel-status {
-  display: none;
 }
 
 .about {
@@ -261,5 +234,36 @@ div {
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.carousel {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(24, 24, 24, 0.89);
+}
+
+.carousel .carousel-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel div {
+  background: transparent;
+}
+
+.carousel div img {
+  height: 90vh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.carousel .control-dots,
+.carousel .carousel-status,
+.carousel .thumbs-wrapper {
+  display: none;
 }
 /*# sourceMappingURL=Main.css.map */

@@ -17,4 +17,8 @@
 div {
   background-color: var(--black);
 }
+
+.App {
+  overflow-x: hidden;
+}
 /*# sourceMappingURL=Global.css.map */

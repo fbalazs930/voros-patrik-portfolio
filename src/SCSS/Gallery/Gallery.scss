@@ -29,30 +29,4 @@
             transition: all 0.3s;
         }
     }
-
-    .portraits {
-        .carousel {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            background: rgba(24, 24, 24, 0.89);
-            .carousel-slider {
-                display: flex;
-            }
-            div {
-                background: transparent;
-                img {
-                    height: 90vh;
-                    width: auto;
-                    object-fit: contain;
-                }
-            }
-            .control-dots,
-            .carousel-status {
-                display: none;
-            }
-        }
-    }
 }
