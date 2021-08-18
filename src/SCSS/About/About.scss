@@ -10,20 +10,20 @@
         justify-content: center;
         align-items: center;
         gap: 3rem;
-        padding:3rem 0;
-        @media only screen and (max-width:755px){
+        padding: 3rem 0;
+        @media only screen and (max-width: 755px) {
             flex-direction: column;
-            gap:2rem;
+            gap: 2rem;
         }
-        .text{
-            p{
-                margin:0 0 .75rem 0;
+        .text {
+            p {
+                margin: 0 0 0.75rem 0;
                 font-weight: bold;
             }
         }
         .own-portriat {
             width: clamp(15rem, 20vw, 40rem);
-            @media only screen and (max-width:755px){
+            @media only screen and (max-width: 755px) {
                 width: clamp(17rem, 25vw, 45rem);
             }
             height: auto;

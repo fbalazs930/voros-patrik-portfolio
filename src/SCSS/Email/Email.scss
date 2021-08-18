@@ -1,0 +1,76 @@
+.email {
+    padding:1rem;
+    h1{
+        padding: 0 0 2rem 0;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: calc(40vw + 3.5rem);
+        min-height: 50vh;
+        gap: 1rem;
+        @media only screen and (max-width: 1050px) {
+            width: calc(80vw + 3.5rem);
+        }
+        input,
+        textarea {
+            width: 80%;
+            height: 5vh;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 0 1px #fff;
+            padding: 0.5rem;
+            background: var(--white);
+            &:focus {
+                box-shadow: 0 0 0 2px #fff;
+            }
+        }
+        textarea {
+            resize: none;
+            min-height: 20vh;
+            line-height: 25px;
+            background: var(--white);
+        }
+        button {
+            cursor: pointer;
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid #fff;
+            padding: 0.8rem 1.3rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: font-weight 0.3s;
+            &:hover {
+                transition: font-weight 0.3s;
+                font-weight: bold;
+                &::after {
+                    transition: all 0.3s ease-out;
+                    transform: skewX(-45deg) scale(1, 1);
+                }
+            }
+            &::after {
+                content: "";
+                background: var(--white);
+                position: absolute;
+                z-index: -1;
+                padding: 1rem 1.5rem;
+                display: block;
+                transition: all 0.3s ease;
+                left: -30%;
+                right: -30%;
+                top: 0;
+                bottom: 0;
+                transform: skewX(-45deg) scale(0, 1);
+            }
+        }
+    }
+}
