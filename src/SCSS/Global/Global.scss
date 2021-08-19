@@ -18,4 +18,8 @@
 }
 h1{
     text-align: center;
+    font-size: clamp(1rem, 10vw, 1.75rem);
+}
+i{
+    font-size: clamp(1rem, 10vw, 1.75rem);
 }

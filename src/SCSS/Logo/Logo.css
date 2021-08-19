@@ -9,7 +9,7 @@
 
 .logo .logo-img {
   padding: 2rem 0 0 0;
-  width: 17rem;
+  width: clamp(10rem, 30vw, 18rem);
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;

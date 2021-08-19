@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
+import { FullImg } from './FullImg.jsx';
 import ImagesDB from './Images.jsx';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 
 export const Dishes = () => {
     const images = ImagesDB.dishes;
@@ -31,19 +30,11 @@ export const Dishes = () => {
             </div>
 
             <div className="mobile-images">
-                <Carousel emulateTouch infiniteLoop autoPlay interval="10000" useKeyboardArrows stopOnHover selectedItem={id}>
-                    {images.map(img => (
-                        <img key={img.id} className="img" src={img.src} alt="étel" />
-                    ))}
-                </Carousel>
+                <FullImg images={images} id={id} />
             </div>
 
             {click ? <>
-                <Carousel emulateTouch infiniteLoop autoPlay interval="10000" useKeyboardArrows stopOnHover selectedItem={id}>
-                    {images.map(img => (
-                        <img key={img.id} className="img" src={img.src} alt="étel" />
-                    ))}
-                </Carousel>
+                <FullImg images={images} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
         </div>

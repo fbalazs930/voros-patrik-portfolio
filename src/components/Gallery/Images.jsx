@@ -50,7 +50,7 @@ const images = {
             id: 5,
             src: 'https://images.pexels.com/photos/7364012/pexels-photo-7364012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
         }
-    ],
+    ]/* ,
     events: [
         {
             id: 0,
@@ -76,7 +76,7 @@ const images = {
             id: 5,
             src: 'https://images.pexels.com/photos/1697902/pexels-photo-1697902.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
         }
-    ],
+    ], */
 
 }
 

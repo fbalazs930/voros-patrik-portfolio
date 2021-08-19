@@ -3,7 +3,7 @@ import React from 'react'
 export const Contact = () => {
     return (
         <div className='contact'>
-            <h1>Elérhetőség: <a href="mailto:vorospatrik@gmail.com">vpatrik2001@gmail.com</a> </h1>
+            {/* <h1>Elérhetőség: <a href="mailto:vorospatrik@gmail.com">vpatrik2001@gmail.com</a> </h1> */}
             <div className="logos">
                 <a target="_blank" rel="noreferrer" href="https://www.instagram.com/patrik_voros/">
                     <i className="fab fa-instagram"></i>
