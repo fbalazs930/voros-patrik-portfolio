@@ -373,7 +373,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 85vw;
+  max-width: 80vw;
   margin: auto;
 }
 
@@ -415,7 +415,7 @@ i {
 
 @media only screen and (max-width: 755px) {
   .about .bottom .own-portriat {
-    width: clamp(17rem, 25vw, 45rem);
+    width: clamp(14rem, 23vw, 45rem);
   }
 }
 

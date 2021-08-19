@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 85vw;
+    max-width: 80vw;
     margin: auto;
     .bottom {
         display: flex;
@@ -24,7 +24,7 @@
         .own-portriat {
             width: clamp(15rem, 20vw, 40rem);
             @media only screen and (max-width: 755px) {
-                width: clamp(17rem, 25vw, 45rem);
+                width: clamp(14rem, 23vw, 45rem);
             }
             height: auto;
             object-fit: contain;
