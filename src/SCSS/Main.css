@@ -5,13 +5,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: italic;
 }
 
 :root {
-  --black: #080808;
+  --black: #131313;
   --white: #d9d9d9;
+  --third: #4ecca3;
 }
 
 .App {
@@ -46,6 +47,23 @@ i {
      object-fit: contain;
 }
 
+.logos {
+  text-align: center;
+}
+
+.logos i {
+  padding: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.logos i:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: var(--third);
+}
+
 .contact {
   min-height: 25vh;
   display: -ms-grid;
@@ -57,15 +75,6 @@ i {
 
 .contact h1 {
   font-size: 1.2rem;
-}
-
-.contact .logos {
-  text-align: center;
-}
-
-.contact .logos i {
-  padding: 0 1rem;
-  cursor: pointer;
 }
 
 .gallery {
@@ -428,15 +437,6 @@ i {
   margin: 1rem 0 0 0;
 }
 
-.socials .logos {
-  font-size: 2.5rem;
-}
-
-.socials .logos i {
-  margin: 1rem;
-  cursor: pointer;
-}
-
 .partners {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,8 +558,8 @@ i {
 
 .email form input:focus,
 .email form textarea:focus {
-  -webkit-box-shadow: 0 0 0 2px #fff;
-          box-shadow: 0 0 0 2px #fff;
+  -webkit-box-shadow: 0 0 0 2px var(--third);
+          box-shadow: 0 0 0 2px var(--third);
 }
 
 .email form textarea {
@@ -594,22 +594,5 @@ i {
   transition: all 0.3s ease-out;
   -webkit-transform: skewX(-45deg) scale(1, 1);
           transform: skewX(-45deg) scale(1, 1);
-}
-
-.email form button::after {
-  content: "";
-  background: var(--white);
-  position: absolute;
-  z-index: -1;
-  padding: 1rem 1.5rem;
-  display: block;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  left: -30%;
-  right: -30%;
-  top: 0;
-  bottom: 0;
-  -webkit-transform: skewX(-45deg) scale(0, 1);
-          transform: skewX(-45deg) scale(0, 1);
 }
 /*# sourceMappingURL=Main.css.map */

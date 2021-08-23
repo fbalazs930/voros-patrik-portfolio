@@ -30,7 +30,7 @@
             background: var(--white);
             color:#000;
             &:focus {
-                box-shadow: 0 0 0 2px #fff;
+                box-shadow: 0 0 0 2px var(--third);
             }
         }
         textarea {
@@ -57,20 +57,6 @@
                     transition: all 0.3s ease-out;
                     transform: skewX(-45deg) scale(1, 1);
                 }
-            }
-            &::after {
-                content: "";
-                background: var(--white);
-                position: absolute;
-                z-index: -1;
-                padding: 1rem 1.5rem;
-                display: block;
-                transition: all 0.3s ease;
-                left: -30%;
-                right: -30%;
-                top: 0;
-                bottom: 0;
-                transform: skewX(-45deg) scale(0, 1);
             }
         }
     }

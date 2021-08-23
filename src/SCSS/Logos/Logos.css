@@ -1,0 +1,17 @@
+.logos {
+  text-align: center;
+}
+
+.logos i {
+  padding: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.logos i:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: var(--third);
+}
+/*# sourceMappingURL=Logos.css.map */

@@ -60,8 +60,8 @@
 
 .email form input:focus,
 .email form textarea:focus {
-  -webkit-box-shadow: 0 0 0 2px #fff;
-          box-shadow: 0 0 0 2px #fff;
+  -webkit-box-shadow: 0 0 0 2px var(--third);
+          box-shadow: 0 0 0 2px var(--third);
 }
 
 .email form textarea {
@@ -96,22 +96,5 @@
   transition: all 0.3s ease-out;
   -webkit-transform: skewX(-45deg) scale(1, 1);
           transform: skewX(-45deg) scale(1, 1);
-}
-
-.email form button::after {
-  content: "";
-  background: var(--white);
-  position: absolute;
-  z-index: -1;
-  padding: 1rem 1.5rem;
-  display: block;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  left: -30%;
-  right: -30%;
-  top: 0;
-  bottom: 0;
-  -webkit-transform: skewX(-45deg) scale(0, 1);
-          transform: skewX(-45deg) scale(0, 1);
 }
 /*# sourceMappingURL=Email.css.map */

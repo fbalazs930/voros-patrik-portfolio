@@ -5,13 +5,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: italic;
 }
 
 :root {
-  --black: #080808;
+  --black: #131313;
   --white: #d9d9d9;
+  --third: #4ecca3;
 }
 
 .App {
