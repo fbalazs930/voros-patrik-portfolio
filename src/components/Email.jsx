@@ -4,7 +4,8 @@ import emailjs from 'emailjs-com';
 export const Email = () => {
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('service_7amnrct', 'template_109x6fc', e.target, 'user_J1ob3Ryk5QebuFnmmgVdQ')
+        emailjs.sendForm('service_lc1ep2d', 'template_rq6u8s8', e.target,
+            'user_DPJA0z119tV74uzT3J57Y')
             .then((result) => {
                 alert("Elküldve!");
             }, (error) => {
