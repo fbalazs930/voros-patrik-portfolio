@@ -24,6 +24,7 @@ export const Gallery = () => {
     const [iFilter, setIFilter] = useState("all");
 
     const [click2, setClick2] = useState(false);
+    const underline = { textDecoration: 'underline' };
 
     return (
         <div className='gallery'>
@@ -56,7 +57,9 @@ export const Gallery = () => {
             {iFilter === "all" ?
                 <div className="images">
                     {images.map(img => (
-                        <img key={img.id} src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                        <div key={img.id}>
+                            <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                        </div>
                     ))}
                 </div>
 
@@ -65,7 +68,9 @@ export const Gallery = () => {
                 <div className="images">
                     {images.map(img => {
                         if (img.type === iFilter) {
-                            return <img key={img.id} src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                            return <div key={img.id}>
+                                <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                            </div>
                         }
                     }
                     )}
