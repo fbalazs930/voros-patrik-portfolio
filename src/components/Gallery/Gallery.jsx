@@ -24,7 +24,6 @@ export const Gallery = () => {
     const [iFilter, setIFilter] = useState("all");
 
     const [click2, setClick2] = useState(false);
-    const underline = { textDecoration: 'underline' };
 
     return (
         <div className='gallery'>
