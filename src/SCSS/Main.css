@@ -93,14 +93,13 @@ i {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
+  /* div {
+        padding: 1.5rem 0;
+    } */
 }
 
 .gallery h1 {
   margin: 0 0 1.5rem 0;
-}
-
-.gallery div {
-  padding: 1.5rem 0;
 }
 
 .gallery .images {

@@ -11,7 +11,7 @@
     div {
         padding: 1.5rem 0;
     }
-    .images {
+    /* .images {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -61,7 +61,7 @@
             transform: scale(1.1);
             transition: all 0.3s;
         }
-    }
+    } */
     .carousel-root {
         z-index: 40;
         position: fixed;
@@ -122,7 +122,7 @@
         }
     }
 
-    .mobile-images {
+    /* .mobile-images {
         display: none;
         @media only screen and (max-width: 720px) {
             display: flex;
@@ -168,5 +168,5 @@
                 }
             }
         }
-    }
+    } */
 }
