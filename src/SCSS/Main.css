@@ -266,7 +266,7 @@ i {
 
 .images div img {
   width: 100%;
-  height: 20rem;
+  height: 44.4vh;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
