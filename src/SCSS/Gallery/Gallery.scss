@@ -1,4 +1,4 @@
-.gallery {
+/* .gallery {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@
     div {
         padding: 1.5rem 0;
     }
-    /* .images {
+    .images {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -61,7 +61,7 @@
             transform: scale(1.1);
             transition: all 0.3s;
         }
-    } */
+    }
     .carousel-root {
         z-index: 40;
         position: fixed;
@@ -122,7 +122,7 @@
         }
     }
 
-    /* .mobile-images {
+    .mobile-images {
         display: none;
         @media only screen and (max-width: 720px) {
             display: flex;
@@ -168,5 +168,79 @@
                 }
             }
         }
-    } */
+    }
+}
+ */
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: clamp(1rem, 10vw, 20rem);
+    grid-auto-rows: auto;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding:.5rem;
+        cursor: pointer;
+    }
+}
+
+.carousel-root {
+    z-index: 40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 20, 20, 0.842);
+    .carousel {
+        display: none;
+    }
+    .carousel-slider {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .slider-wrapper {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img {
+                height: 90vh;
+                width: auto;
+                object-fit: contain;
+                cursor: pointer;
+            }
+        }
+    }
+    .slider .animated {
+        display: none;
+    }
+
+    .carousel-status,
+    .control-dots,
+    .thumbs-wrapper {
+        display: none;
+    }
+}
+.fa-times {
+    color: #858585;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+        color: #d3d3d3;
+        transition: all 0.3s;
+    }
 }

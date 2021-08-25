@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
-import ImagesDB from './Images.jsx';
+import ImagesDB from './ImagesByType.jsx';
 
 export const Events = () => {
     const images = ImagesDB.events;

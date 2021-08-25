@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import ImagesDB from './Images.jsx';
+import ImagesDB from './ImagesByType.jsx';
 import { FullImg } from './FullImg.jsx';
 
 export const Portraits = () => {
