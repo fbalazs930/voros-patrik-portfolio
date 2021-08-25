@@ -23,7 +23,7 @@
 
 h1 {
   text-align: center;
-  font-size: clamp(1rem, 10vw, 1.75rem);
+  font-size: clamp(1rem, 10vw, 2rem);
 }
 
 i {
@@ -253,9 +253,9 @@ i {
 .images {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  padding: clamp(1rem, 10vw, 20rem);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 clamp(1rem, 10vw, 20rem);
   grid-auto-rows: auto;
 }
 
@@ -264,7 +264,61 @@ i {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-  padding: .5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.filters {
+  font-size: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.filters .top {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+}
+
+.filters i {
+  font-size: 1.2rem;
+}
+
+.filters .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.filters h2 {
   cursor: pointer;
 }
 

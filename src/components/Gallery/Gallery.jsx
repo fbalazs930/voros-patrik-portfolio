@@ -1,10 +1,5 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
-/* import { Portraits } from './Portraits';
-import { Dishes } from './Dishes';
-import { Events } from './Events';
-import { Landscapes } from './Landscapes'; */
-
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
 
@@ -28,24 +23,32 @@ export const Gallery = () => {
 
     const [iFilter, setIFilter] = useState("all");
 
-
+    const [click2, setClick2] = useState(false);
 
     return (
         <div className='gallery'>
             <div>
                 <h1>Galéria</h1>
             </div>
-            {/* <Portraits/>
-            <Dishes/>
-            <Events/>
-            <Landscapes/>*/}
 
             <div className="filters">
-                <h2 onClick={() => { setIFilter("all") }}>Mind</h2>
-                <h2 onClick={() => { setIFilter("portrait") }}>Portré</h2>
-                <h2 onClick={() => { setIFilter("gastro") }}>Étel</h2>
-                <h2 onClick={() => { setIFilter("event") }}>Rendezvény</h2>
-                <h2 onClick={() => { setIFilter("landscape") }}>Táj</h2>
+                <div className="top" onClick={() => setClick2(!click2)}>
+                    <i className="fas fa-filter"></i>
+                    <h2>Szűrés</h2>
+                </div>
+                {click2 ?
+                    <div className="types">
+                        <h2 onClick={() => { setIFilter("all") }}>Mind</h2>
+                        <h2 onClick={() => { setIFilter("portrait") }}>Portré</h2>
+                        <h2 onClick={() => { setIFilter("gastro") }}>Étel</h2>
+                        <h2 onClick={() => { setIFilter("event") }}>Rendezvény</h2>
+                        <h2 onClick={() => { setIFilter("landscape") }}>Táj</h2>
+                    </div>
+                    :
+                    <div className="types">
+                        &nbsp;
+                    </div>
+                }
             </div>
 
 

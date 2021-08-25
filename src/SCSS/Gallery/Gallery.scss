@@ -171,16 +171,46 @@
     }
 }
  */
+
 .images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: clamp(1rem, 10vw, 20rem);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 clamp(1rem, 10vw, 20rem);
     grid-auto-rows: auto;
     img {
         width: 100%;
         height: auto;
         object-fit: contain;
-        padding:.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+.filters {
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding:3rem 0;
+    .top{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:.5rem;
+    }
+    i {
+        font-size: 1.2rem;
+    }
+    .types {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    h2{
         cursor: pointer;
     }
 }
