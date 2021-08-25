@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import ImagesDB from './Images.jsx';
 
-export const Dishes = () => {
-    const images = ImagesDB.dishes;
+export const Events = () => {
+    const images = ImagesDB.events;
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
     const clickHandler = (id) => {
@@ -21,11 +21,11 @@ export const Dishes = () => {
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
     return (
-        <div className='dishes'>
-            <h1>Ételfotók</h1>
+        <div className='events'>
+            <h1>Rendezvényfotók</h1>
             <div className="images">
                 {images.map(img => (
-                    <img key={img.id} src={img.src} alt="étel" onClick={() => clickHandler(img.id)} />
+                    <img key={img.id} src={img.src} alt="rendezvény" onClick={() => clickHandler(img.id)} />
                 ))}
             </div>
 

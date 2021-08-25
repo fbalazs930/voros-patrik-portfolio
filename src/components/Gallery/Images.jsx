@@ -2,82 +2,71 @@ const images = {
     portraits: [
         {
             id: 0,
-            src: 'https://images.pexels.com/photos/2859594/pexels-photo-2859594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/XvDMqchy/11.jpg'
         },
         {
             id: 1,
-            src: 'https://images.pexels.com/photos/995978/pexels-photo-995978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/W4yKTpFG/IMG-2535.jpg'
         },
         {
             id: 2,
-            src: 'https://images.pexels.com/photos/3236765/pexels-photo-3236765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/rpTsgcF9/IMG-3454.jpg'
         },
         {
             id: 3,
-            src: 'https://images.pexels.com/photos/2922450/pexels-photo-2922450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/cLR4vjMt/IMG-38550806.jpg'
         },
         {
             id: 4,
-            src: 'https://images.pexels.com/photos/5372800/pexels-photo-5372800.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/jjRqPXZg/IMG-38920806.jpg'
         },
         {
             id: 5,
-            src: 'https://images.pexels.com/photos/2061302/pexels-photo-2061302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/Qx6v0q8Y/IMG-40442106.jpg'
         }
     ],
     dishes: [
         {
             id: 0,
-            src: 'https://images.pexels.com/photos/7363985/pexels-photo-7363985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/Gh9XhnRz/199.png'
         },
         {
             id: 1,
-            src: 'https://images.pexels.com/photos/7363975/pexels-photo-7363975.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/50nmbnkZ/207.png'
         },
         {
             id: 2,
-            src: 'https://images.pexels.com/photos/8286784/pexels-photo-8286784.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/ZYsLQsNN/IMG-36680806.jpg'
         },
         {
             id: 3,
-            src: 'https://images.pexels.com/photos/7364006/pexels-photo-7364006.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/hPJ0R885/IMG-36690806.jpg'
         },
         {
             id: 4,
-            src: 'https://images.pexels.com/photos/7363962/pexels-photo-7363962.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        },
-        {
-            id: 5,
-            src: 'https://images.pexels.com/photos/7364012/pexels-photo-7364012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/xCxLWqXQ/IMG-36700806.jpg'
         }
-    ]/* ,
+    ],
     events: [
         {
             id: 0,
-            src: 'https://images.pexels.com/photos/59884/pexels-photo-59884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/s2Pk9Cv7/215.jpg'
         },
         {
             id: 1,
-            src: 'https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        },
-        {
-            id: 2,
-            src: 'https://images.pexels.com/photos/2311713/pexels-photo-2311713.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        },
-        {
-            id: 3,
-            src: 'https://images.pexels.com/photos/7392370/pexels-photo-7392370.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        },
-        {
-            id: 4,
-            src: 'https://images.pexels.com/photos/3951652/pexels-photo-3951652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        },
-        {
-            id: 5,
-            src: 'https://images.pexels.com/photos/1697902/pexels-photo-1697902.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            src: 'https://i.postimg.cc/VsZ3FRLG/194.png'
         }
-    ], */
-
+    ],
+    lansdscapes: [
+        {
+            id: 0,
+            src: 'https://i.postimg.cc/s2Pk9Cv7/215.jpg'
+        },
+        {
+            id: 1,
+            src: 'https://i.postimg.cc/VsZ3FRLG/194.png'
+        }
+    ]
 }
 
 export default images;

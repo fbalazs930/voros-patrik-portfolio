@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logos } from './Gallery/Logos'
+import { Logos } from './Logos'
 
 export const Contact = () => {
     return (
