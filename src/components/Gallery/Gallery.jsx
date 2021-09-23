@@ -28,7 +28,7 @@ export const Gallery = () => {
     return (
         <div className='gallery'>
             <div>
-                <h1>Galéria</h1>
+                <h1>Munkáim</h1>
             </div>
 
             <div className="filters">
@@ -40,8 +40,8 @@ export const Gallery = () => {
                     <div className="types">
                         <h2 onClick={() => { setIFilter("all") }}>Mind</h2>
                         <h2 onClick={() => { setIFilter("portrait") }}>Portré</h2>
-                        <h2 onClick={() => { setIFilter("gastro") }}>Étel</h2>
-                        <h2 onClick={() => { setIFilter("event") }}>Rendezvény</h2>
+                        <h2 onClick={() => { setIFilter("gastro") }}>Kávé / gasztró</h2>
+                        <h2 onClick={() => { setIFilter("event") }}>Városi rendezvény</h2>
                         <h2 onClick={() => { setIFilter("landscape") }}>Táj</h2>
                     </div>
                     :
