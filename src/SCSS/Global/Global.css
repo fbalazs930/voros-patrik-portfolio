@@ -29,4 +29,8 @@ h1 {
 i {
   font-size: clamp(1rem, 10vw, 1.75rem);
 }
+
+.p {
+  padding: 2rem 0;
+}
 /*# sourceMappingURL=Global.css.map */

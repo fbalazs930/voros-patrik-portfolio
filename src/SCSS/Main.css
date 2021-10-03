@@ -30,6 +30,10 @@ i {
   font-size: clamp(1rem, 10vw, 1.75rem);
 }
 
+.p {
+  padding: 2rem 0;
+}
+
 .logo {
   min-height: 20vh;
   display: -ms-grid;
@@ -755,5 +759,21 @@ div .images div img:hover {
   transition: transform .4s, -webkit-transform .4s;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.videos {
+  min-height: 85vh;
+}
+
+.videos .videos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=Main.css.map */

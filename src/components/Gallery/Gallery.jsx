@@ -26,7 +26,7 @@ export const Gallery = () => {
     const [click2, setClick2] = useState(false);//show filters
 
     return (
-        <div className='gallery'>
+        <div className='gallery p'>
             <div>
                 <h1>Fotók</h1>
             </div>
