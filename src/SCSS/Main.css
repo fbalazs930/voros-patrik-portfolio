@@ -69,12 +69,12 @@ i {
 }
 
 .contact {
-  min-height: 25vh;
+  min-height: 90vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
   color: #fafafa;
-  padding: 1rem 0;
+  padding: 6rem 0;
 }
 
 .contact h1 {
@@ -791,7 +791,7 @@ div .images div img:hover {
 }
 
 .videos {
-  min-height: 85vh;
+  min-height: 90vh;
 }
 
 .videos .videos-container {
