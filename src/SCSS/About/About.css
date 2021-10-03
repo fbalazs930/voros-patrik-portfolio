@@ -13,6 +13,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 80vw;
+  min-height: 90vh;
   margin: auto;
 }
 
@@ -41,12 +42,13 @@
 }
 
 .about .bottom .text p {
+  line-height: 30px;
   margin: 0 0 0.75rem 0;
   font-weight: bold;
 }
 
 .about .bottom .own-portriat {
-  width: clamp(15rem, 20vw, 40rem);
+  width: clamp(300px, 30vw, 40rem);
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;

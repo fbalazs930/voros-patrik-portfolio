@@ -23,12 +23,12 @@ export const Gallery = () => {
 
     const [iFilter, setIFilter] = useState("all");
 
-    const [click2, setClick2] = useState(false);
+    const [click2, setClick2] = useState(false);//show filters
 
     return (
         <div className='gallery'>
             <div>
-                <h1>Munkáim</h1>
+                <h1>Fotók</h1>
             </div>
 
             <div className="filters">

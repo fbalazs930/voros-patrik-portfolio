@@ -3,7 +3,7 @@ import React from 'react';
 export const About = () => {
     return (
         <div className='about'>
-            <h1>Magamról //routerrel új oldal</h1>
+            <h1>Magamról</h1>
             <div className="bottom">
                 <div className="text">
                     <p>Vörös Patriknak hívnak egy vidéki kisvárosból származom. 20 éves vagyok  és szeretek emberekkel foglalkozni, szeretek pillanatokat megörökíteni a világból legyen az videó vagy fotó álltal és ezzel más embereknek is segítséget nyújtani vagy szebbé tenni napjaikat.</p>

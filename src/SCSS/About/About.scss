@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     max-width: 80vw;
+    min-height: 90vh;
     margin: auto;
     .bottom {
         display: flex;
@@ -17,12 +18,13 @@
         }
         .text {
             p {
+                line-height: 30px;
                 margin: 0 0 0.75rem 0;
                 font-weight: bold;
             }
         }
         .own-portriat {
-            width: clamp(15rem, 20vw, 40rem);
+            width: clamp(300px, 30vw, 40rem);
             @media only screen and (max-width: 755px) {
                 width: clamp(14rem, 23vw, 45rem);
             }
