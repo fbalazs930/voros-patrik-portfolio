@@ -2,7 +2,7 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
-import images from './Images.jsx';
+import featured from './Featured.jsx';
 
 export const Prologue = () => {
     const [click, setClick] = useState(false);
@@ -20,26 +20,16 @@ export const Prologue = () => {
         window.addEventListener('keyup', exit);
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
-
-    let temp = [];
-    const [featured, setFeatured] = useState([]);
-    useEffect(() => {
-        images.map(img => {
-            if (img.isFeatured === true) {
-                temp.push(img);
-            }
-        })
-        setFeatured(temp);
-    }, [])
+    
     return (
         <div className='p'>
             <h1>Kiemelt képek</h1>
             <div className="images">
-                {featured.map(img => {
+                {featured.map(img => (
                     <div key={img.id}>
                         <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                     </div>
-                })}
+                ))}
             </div>
 
             {click ? <>
