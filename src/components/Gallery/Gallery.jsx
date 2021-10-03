@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
@@ -24,6 +25,21 @@ export const Gallery = () => {
     const [iFilter, setIFilter] = useState("all");
 
     const [click2, setClick2] = useState(false);//show filters
+    const [click3, setClick3] = useState(false);//show mobile images
+
+    const checkWidth = () => {
+        if (window.innerWidth < 681) {
+            setClick3(true);
+        }
+        else {
+            setClick3(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', checkWidth);
+        return window.removeEventListener('resize', checkWidth);
+    }, [])
 
     return (
         <div className='gallery p'>
@@ -80,6 +96,12 @@ export const Gallery = () => {
                 <FullImg images={images} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
+
+
+            {click3 ?
+                <div className="mobile-images">
+                    <h1>mobile images</h1>
+                </div> : null}
         </div>
     )
 }
