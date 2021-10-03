@@ -9,7 +9,7 @@ import { Socials } from './components/Socials';
 const Home = () => {
     return (
         <div className="App">
-            <Logo />
+            {/* <Logo /> */}
             <Contact/>
             <Gallery/>
             <Email/>
