@@ -12,6 +12,12 @@ const images = [
         isFeatured: true
     },
     {
+        id: 0,
+        src: 'https://i.postimg.cc/nzDmWJPt/IMG-6958.jpg',
+        type: 'modell',
+        isFeatured: true
+    },
+    {
         id: 1,
         src: 'https://i.postimg.cc/G3BFQBYJ/11.jpg',
         type: 'gastro',
@@ -32,6 +38,12 @@ const images = [
     {
         id: 3,
         src: 'https://i.postimg.cc/Z5m64VQV/12.jpg',
+        type: 'portrait',
+        isFeatured: false
+    },
+    {
+        id: 3,
+        src: 'https://i.postimg.cc/Fsgymhsr/IMG-6932.jpg',
         type: 'portrait',
         isFeatured: false
     },
@@ -121,6 +133,12 @@ const images = [
     },
     {
         id: 10,
+        src: 'https://i.postimg.cc/SxkGzJtY/IMG-6964.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 10,
         src: 'https://i.postimg.cc/02qYLzvX/IMG-6504.jpg',
         type: 'modell',
         isFeatured: false
@@ -144,9 +162,21 @@ const images = [
         isFeatured: false
     },
     {
+        id: 12,
+        src: 'https://i.postimg.cc/KvFT0C7d/IMG-6972.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
         id: 13,
         src: 'https://i.postimg.cc/bJ42MTb0/17.jpg',
         type: 'portrait',
+        isFeatured: false
+    },
+    {
+        id: 13,
+        src: 'https://i.postimg.cc/mrVC9j10/IMG-6812.jpg',
+        type: 'modell',
         isFeatured: false
     },
     {
@@ -164,6 +194,12 @@ const images = [
     {
         id: 14,
         src: 'https://i.postimg.cc/BtWK3wR1/IMG-5278.jpg',
+        type: 'modell',
+        isFeatured: true
+    },
+    {
+        id: 14,
+        src: 'https://i.postimg.cc/KvFT0C7d/IMG-6972.jpg',
         type: 'modell',
         isFeatured: true
     },
@@ -192,9 +228,27 @@ const images = [
         isFeatured: false
     },
     {
+        id: 16,
+        src: 'https://i.postimg.cc/nLnqMgr4/IMG-6816.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
         id: 17,
         src: 'https://i.postimg.cc/3W5JjfG6/10.jpg',
         type: 'gastro',
+        isFeatured: false
+    },
+    {
+        id: 17,
+        src: 'https://i.postimg.cc/pdyzD8Qr/IMG-6879.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 17,
+        src: 'https://i.postimg.cc/tTYkCwvr/IMG-7010.jpg',
+        type: 'modell',
         isFeatured: false
     },
     {
@@ -249,6 +303,12 @@ const images = [
         id: 22,
         src: 'https://i.postimg.cc/nhKM2x01/5.jpg',
         type: 'gastro',
+        isFeatured: true
+    },
+    {
+        id: 22,
+        src: 'https://i.postimg.cc/65sctHr0/IMG-7020.jpg',
+        type: 'modell',
         isFeatured: true
     },
     {
