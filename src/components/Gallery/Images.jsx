@@ -31,6 +31,12 @@ const images = [
     },
     {
         id: 2,
+        src: 'https://i.postimg.cc/cHzF5LKm/IMG-45341909.jpg',
+        type: 'fest',
+        isFeatured: true
+    },
+    {
+        id: 2,
         src: 'https://i.postimg.cc/Y0NWpx7n/IMG-6688.jpg',
         type: 'modell',
         isFeatured: true
@@ -54,6 +60,12 @@ const images = [
         isFeatured: false
     },
     {
+        id: 3,
+        src: 'https://i.postimg.cc/rp8ZDbXS/IMG-45441909.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
         id: 4,
         src: 'https://i.postimg.cc/xdt8rRrJ/3.jpg',
         type: 'event',
@@ -69,6 +81,12 @@ const images = [
         id: 5,
         src: 'https://i.postimg.cc/fbLtRFfj/23.jpg',
         type: 'landscape',
+        isFeatured: false
+    },
+    {
+        id: 5,
+        src: 'https://i.postimg.cc/Kzj9NMYj/IMG-45851909.jpg',
+        type: 'fest',
         isFeatured: false
     },
     {
@@ -97,6 +115,12 @@ const images = [
     },
     {
         id: 6,
+        src: 'https://i.postimg.cc/hPXBjXbS/IMG-46471909.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 6,
         src: 'https://i.postimg.cc/FHyjrNrF/IMG-6767.jpg',
         type: 'modell',
         isFeatured: false
@@ -111,6 +135,12 @@ const images = [
         id: 7,
         src: 'https://i.postimg.cc/5Nw30wpM/IMG-6057.jpg',
         type: 'modell',
+        isFeatured: true
+    },
+    {
+        id: 7,
+        src: 'https://i.postimg.cc/T2HzZR8B/IMG-46561909.jpg',
+        type: 'fest',
         isFeatured: true
     },
     {
@@ -144,6 +174,12 @@ const images = [
         isFeatured: false
     },
     {
+        id: 9,
+        src: 'https://i.postimg.cc/cC6Vrz3D/IMG-46641909.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
         id: 10,
         src: 'https://i.postimg.cc/HnGV3LDB/26.jpg',
         type: 'event',
@@ -163,6 +199,18 @@ const images = [
     },
     {
         id: 10,
+        src: 'https://i.postimg.cc/wjYGpMw4/IMG-5220.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 10,
+        src: 'https://i.postimg.cc/pXwgLqLZ/IMG-47041909.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 10,
         src: 'https://i.postimg.cc/02qYLzvX/IMG-6504.jpg',
         type: 'modell',
         isFeatured: false
@@ -171,6 +219,12 @@ const images = [
         id: 10,
         src: 'https://i.postimg.cc/Fz0jY4yx/IMG-6635.jpg',
         type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 10,
+        src: 'https://i.postimg.cc/xC6wjQXJ/IMG-47331909.jpg',
+        type: 'fest',
         isFeatured: false
     },
     {
@@ -199,6 +253,12 @@ const images = [
     },
     {
         id: 13,
+        src: 'https://i.postimg.cc/kXbpzKvt/IMG-5207.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 13,
         src: 'https://i.postimg.cc/mrVC9j10/IMG-6812.jpg',
         type: 'modell',
         isFeatured: false
@@ -207,6 +267,12 @@ const images = [
         id: 13,
         src: 'https://i.postimg.cc/pLWDL3pD/IMG-6682.jpg',
         type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 13,
+        src: 'https://i.postimg.cc/bw14DkGj/IMG-47981909.jpg',
+        type: 'fest',
         isFeatured: false
     },
     {
@@ -253,6 +319,12 @@ const images = [
     },
     {
         id: 16,
+        src: 'https://i.postimg.cc/vmsF33RB/IMG-5164.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 16,
         src: 'https://i.postimg.cc/FHVDPjJx/IMG-7048.jpg',
         type: 'modell',
         isFeatured: false
@@ -261,6 +333,12 @@ const images = [
         id: 16,
         src: 'https://i.postimg.cc/wxDJc9NX/IMG-6555.jpg',
         type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 16,
+        src: 'https://i.postimg.cc/pr738BYP/IMG-48471909.jpg',
+        type: 'fest',
         isFeatured: false
     },
     {
@@ -283,6 +361,12 @@ const images = [
     },
     {
         id: 17,
+        src: 'https://i.postimg.cc/pdx4Dr85/IMG-48581909.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
+        id: 17,
         src: 'https://i.postimg.cc/tTYkCwvr/IMG-7010.jpg',
         type: 'modell',
         isFeatured: false
@@ -295,14 +379,32 @@ const images = [
     },
     {
         id: 18,
+        src: 'https://i.postimg.cc/FsdMv2Nz/IMG-48631909.jpg',
+        type: 'fest',
+        isFeatured: true
+    },
+    {
+        id: 18,
         src: 'https://i.postimg.cc/QdYWxCL3/MG-6226.png',
         type: 'modell',
+        isFeatured: true
+    },
+    {
+        id: 18,
+        src: 'https://i.postimg.cc/GpQNzRJ7/IMG-4969.jpg',
+        type: 'fest',
         isFeatured: true
     },
     {
         id: 19,
         src: 'https://i.postimg.cc/xd4kJRsr/24.jpg',
         type: 'portrait',
+        isFeatured: false
+    },
+    {
+        id: 19,
+        src: 'https://i.postimg.cc/VsThKDn8/IMG-5147.jpg',
+        type: 'fest',
         isFeatured: false
     },
     {
@@ -321,6 +423,12 @@ const images = [
         id: 20,
         src: 'https://i.postimg.cc/QM47gsdy/9.jpg',
         type: 'portrait',
+        isFeatured: true
+    },
+    {
+        id: 20,
+        src: 'https://i.postimg.cc/qRvF5F1k/IMG-5001.jpg',
+        type: 'fest',
         isFeatured: true
     },
     {
@@ -354,6 +462,18 @@ const images = [
         isFeatured: true
     },
     {
+        id: 22,
+        src: 'https://i.postimg.cc/vTpSDZbB/IMG-5119.jpg',
+        type: 'fest',
+        isFeatured: true
+    },
+    {
+        id: 22,
+        src: 'https://i.postimg.cc/kgNhXCZJ/IMG-5026.jpg',
+        type: 'fest',
+        isFeatured: true
+    },
+    {
         id: 23,
         src: 'https://i.postimg.cc/hjvjKdgC/6.jpg',
         type: 'event',
@@ -378,6 +498,12 @@ const images = [
         isFeatured: false
     },
     {
+        id: 24,
+        src: 'https://i.postimg.cc/269tRxtn/IMG-5049.jpg',
+        type: 'fest',
+        isFeatured: false
+    },
+    {
         id: 25,
         src: 'https://i.postimg.cc/rw9xm5Xc/8.jpg',
         type: 'portrait',
@@ -385,8 +511,20 @@ const images = [
     },
     {
         id: 25,
+        src: 'https://i.postimg.cc/fy3rw94p/IMG-5085.jpg',
+        type: 'fest',
+        isFeatured: true
+    },
+    {
+        id: 25,
         src: 'https://i.postimg.cc/htWLRfq3/MG-6320.jpg',
         type: 'modell',
+        isFeatured: true
+    },
+    {
+        id: 25,
+        src: 'https://i.postimg.cc/SKf05CqG/IMG-5051.jpg',
+        type: 'fest',
         isFeatured: true
     },
     {
@@ -405,6 +543,12 @@ const images = [
         id: 26,
         src: 'https://i.postimg.cc/sgrT9n1X/IMG-5606.jpg',
         type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 26,
+        src: 'https://i.postimg.cc/mDZxGkgW/IMG-5062.jpg',
+        type: 'fest',
         isFeatured: false
     }
 ]
