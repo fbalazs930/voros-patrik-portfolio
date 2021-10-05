@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
+import Paginator from './Paginator.jsx';
 
 
 export const Gallery = () => {
@@ -46,8 +47,15 @@ export const Gallery = () => {
         //window.history.pushState({}, filter, `/fotok/${filter}`);
     }
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const [photoPerPage] = useState(9);
 
-   
+    const lastPhoto = currentPage * photoPerPage;
+    const firstPhoto = lastPhoto - photoPerPage;
+    const currentPhoto = images.slice(firstPhoto, lastPhoto);
+
+    const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
+
 
     return (
         <div className='gallery p'>
@@ -109,7 +117,9 @@ export const Gallery = () => {
             {click3 ?
                 <div className="mobile-images">
                     <h1>mobile images</h1>
-                </div> : null}
+                </div> : null
+            }
+            <Paginator photoPerPage={photoPerPage} totalPhoto={images.length} paginate={paginate} />
         </div>
     )
 }
