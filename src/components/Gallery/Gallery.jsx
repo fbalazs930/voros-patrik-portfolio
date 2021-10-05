@@ -41,6 +41,14 @@ export const Gallery = () => {
         return window.removeEventListener('resize', checkWidth);
     }, [])
 
+    const setFilterFn = (filter) => {
+        setIFilter(filter);
+        //window.history.pushState({}, filter, `/fotok/${filter}`);
+    }
+
+
+   
+
     return (
         <div className='gallery p'>
             <div>
@@ -54,11 +62,11 @@ export const Gallery = () => {
                 </div>
                 {click2 ?
                     <div className="types">
-                        <h2 onClick={() => { setIFilter("all") }}>Mind</h2>
-                        <h2 onClick={() => { setIFilter("portrait") }}>Portré</h2>
-                        <h2 onClick={() => { setIFilter("gastro") }}>Kávé / gasztró</h2>
-                        <h2 onClick={() => { setIFilter("event") }}>Városi rendezvény</h2>
-                        <h2 onClick={() => { setIFilter("landscape") }}>Táj</h2>
+                        <h2 onClick={() => { setFilterFn("all") }}>Mind</h2>
+                        <h2 onClick={() => { setFilterFn("portrait") }}>Portré</h2>
+                        <h2 onClick={() => { setFilterFn("gastro") }}>Kávé / gasztró</h2>
+                        <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
+                        <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                     </div>
                     :
                     <div className="types">
