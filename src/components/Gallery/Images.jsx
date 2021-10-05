@@ -36,6 +36,12 @@ const images = [
         isFeatured: true
     },
     {
+        id: 2,
+        src: 'https://i.postimg.cc/LsyvS2DY/IMG-7079.jpg',
+        type: 'modell',
+        isFeatured: true
+    },
+    {
         id: 3,
         src: 'https://i.postimg.cc/Z5m64VQV/12.jpg',
         type: 'portrait',
@@ -78,6 +84,12 @@ const images = [
         isFeatured: false
     },
     {
+        id: 5,
+        src: 'https://i.postimg.cc/jq16vM3T/MG-6186.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
         id: 6,
         src: 'https://i.postimg.cc/RCjcbMLr/14.jpg',
         type: 'portrait',
@@ -109,6 +121,12 @@ const images = [
     },
     {
         id: 8,
+        src: 'https://i.postimg.cc/CM9PdMgb/IMG-7067.jpg',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
+        id: 8,
         src: 'https://i.postimg.cc/kGRbkdYm/IMG-5237.jpg',
         type: 'modell',
         isFeatured: false
@@ -129,6 +147,12 @@ const images = [
         id: 10,
         src: 'https://i.postimg.cc/HnGV3LDB/26.jpg',
         type: 'event',
+        isFeatured: false
+    },
+    {
+        id: 10,
+        src: 'https://i.postimg.cc/Y2L8ccW0/IMG-7104.jpg',
+        type: 'modell',
         isFeatured: false
     },
     {
@@ -211,6 +235,12 @@ const images = [
     },
     {
         id: 15,
+        src: 'https://i.postimg.cc/MGZtgv7J/IMG-7123.jpg',
+        type: 'modell',
+        isFeatured: true
+    },
+    {
+        id: 15,
         src: 'https://i.postimg.cc/ZnzNtMGv/IMG-6626.jpg',
         type: 'modell',
         isFeatured: true
@@ -219,6 +249,12 @@ const images = [
         id: 16,
         src: 'https://i.postimg.cc/tgXJmccG/4.jpg',
         type: 'event',
+        isFeatured: false
+    },
+    {
+        id: 16,
+        src: 'https://i.postimg.cc/FHVDPjJx/IMG-7048.jpg',
+        type: 'modell',
         isFeatured: false
     },
     {
@@ -255,6 +291,12 @@ const images = [
         id: 18,
         src: 'https://i.postimg.cc/DyL19txS/13.jpg',
         type: 'portrait',
+        isFeatured: true
+    },
+    {
+        id: 18,
+        src: 'https://i.postimg.cc/QdYWxCL3/MG-6226.png',
+        type: 'modell',
         isFeatured: true
     },
     {
@@ -318,6 +360,12 @@ const images = [
         isFeatured: false
     },
     {
+        id: 23,
+        src: 'https://i.postimg.cc/YCCWHgsR/MG-6272.png',
+        type: 'modell',
+        isFeatured: false
+    },
+    {
         id: 24,
         src: 'https://i.postimg.cc/50rty22f/7.jpg',
         type: 'portrait',
@@ -333,6 +381,12 @@ const images = [
         id: 25,
         src: 'https://i.postimg.cc/rw9xm5Xc/8.jpg',
         type: 'portrait',
+        isFeatured: true
+    },
+    {
+        id: 25,
+        src: 'https://i.postimg.cc/htWLRfq3/MG-6320.jpg',
+        type: 'modell',
         isFeatured: true
     },
     {
