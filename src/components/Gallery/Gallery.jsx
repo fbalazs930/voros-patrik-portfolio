@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
-import Paginator from './Paginator.jsx';
+import Paginator from '../Paginator';
 
 
 export const Gallery = () => {
@@ -48,11 +48,11 @@ export const Gallery = () => {
     }
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [photoPerPage] = useState(9);
+    const [photoPerPage] = useState(14);
 
     const lastPhoto = currentPage * photoPerPage;
     const firstPhoto = lastPhoto - photoPerPage;
-    const currentPhoto = images.slice(firstPhoto, lastPhoto);
+    const currentPhotos = images.slice(firstPhoto, lastPhoto);
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
 
@@ -75,6 +75,7 @@ export const Gallery = () => {
                         <h2 onClick={() => { setFilterFn("gastro") }}>Kávé / gasztró</h2>
                         <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
                         <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
+                        <h2 onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
                     </div>
                     :
                     <div className="types">
@@ -87,7 +88,7 @@ export const Gallery = () => {
 
             {iFilter === "all" ?
                 <div className="images">
-                    {images.map(img => (
+                    {currentPhotos.map(img => (
                         <div key={img.id}>
                             <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                         </div>
@@ -97,7 +98,7 @@ export const Gallery = () => {
                 :
 
                 <div className="images">
-                    {images.map(img => {
+                    {currentPhotos.map(img => {
                         if (img.type === iFilter) {
                             return <div key={img.id}>
                                 <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
