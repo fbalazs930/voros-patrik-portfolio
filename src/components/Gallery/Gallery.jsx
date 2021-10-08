@@ -5,7 +5,6 @@ import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
 import Paginator from '../Paginator';
 
-
 export const Gallery = () => {
 
     //CHANGING ARRAY FOR PAGINATOR
@@ -29,12 +28,10 @@ export const Gallery = () => {
 
     const [click2, setClick2] = useState(false);//show filters
 
-
     const setFilterFn = (filter) => {
         let temp = [];
         let i = 0;
         if (filter === "all") {
-            setArray(images);
             images.map(img => {
                 img.id = i;
                 temp.push(img);
@@ -52,18 +49,17 @@ export const Gallery = () => {
         }
         setArray(temp);
     }
-    const [currentPage, setCurrentPage] = useState(1);
+
+    /* const [currentPage, setCurrentPage] = useState(1);
     const [photoPerPage] = useState(14);
 
     const lastPhoto = currentPage * photoPerPage;
-    //const [lastPhoto, setLastPhoto] = useState(currentPage * photoPerPage);
     const firstPhoto = lastPhoto - photoPerPage;
-    //const [firstPhoto, setFirstPhoto] = useState(lastPhoto - photoPerPage);
+
     const currentPhotos = array.slice(firstPhoto, lastPhoto);
-    //const [currentPhotos, setCurrentPhotos] = useState(images.slice(firstPhoto, lastPhoto));
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
-
+ */
 
     return (
         <div className='gallery p'>
@@ -84,6 +80,7 @@ export const Gallery = () => {
                         <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
                         <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                         <h2 onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
+                        <h2 onClick={() => { setFilterFn("modell") }}>Modell</h2>
                     </div>
                     :
                     <div className="types">
@@ -95,7 +92,7 @@ export const Gallery = () => {
 
 
             <div className="images">
-                {currentPhotos.map(img => (
+                {array.map(img => (
                     <div key={img.id}>
                         <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                     </div>
@@ -103,10 +100,10 @@ export const Gallery = () => {
             </div>
 
             {click ? <>
-                <FullImg images={currentPhotos} id={id} />
+                <FullImg images={array} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
-            <Paginator photoPerPage={photoPerPage} totalPhoto={currentPhotos.length} paginate={paginate} />
+            {/* <Paginator photoPerPage={photoPerPage} totalPhoto={currentPhotos.length} paginate={paginate} /> */}            
         </div>
     )
 }
