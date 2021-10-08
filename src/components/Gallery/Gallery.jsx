@@ -29,6 +29,7 @@ export const Gallery = () => {
     const [click2, setClick2] = useState(false);//show filters
 
     const setFilterFn = (filter) => {
+        setClick2(false);
         setCurrentPage(1);
         let temp = [];
         let i = 0;
