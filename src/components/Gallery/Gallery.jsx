@@ -7,6 +7,10 @@ import Paginator from '../Paginator';
 
 
 export const Gallery = () => {
+
+    //CHANGING ARRAY FOR PAGINATOR
+    const [array, setArray] = useState(images);
+
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
     const clickHandler = (id) => {
@@ -26,33 +30,31 @@ export const Gallery = () => {
     const [iFilter, setIFilter] = useState("all");
 
     const [click2, setClick2] = useState(false);//show filters
-    const [click3, setClick3] = useState(false);//show mobile images
 
-    const checkWidth = () => {
-        if (window.innerWidth < 681) {
-            setClick3(true);
-        }
-        else {
-            setClick3(false);
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', checkWidth);
-        return window.removeEventListener('resize', checkWidth);
-    }, [])
 
     const setFilterFn = (filter) => {
         setIFilter(filter);
-        //window.history.pushState({}, filter, `/fotok/${filter}`);
+        let i = 0;
+        let temp = [];
+        array.map(img => {
+            if (img.type === iFilter) {
+                img.id = i;
+                temp.push(img);
+                console.log(img.id);
+                i++;
+            }
+        })
+        setArray(temp);
     }
-
     const [currentPage, setCurrentPage] = useState(1);
     const [photoPerPage] = useState(14);
 
     const lastPhoto = currentPage * photoPerPage;
+    //const [lastPhoto, setLastPhoto] = useState(currentPage * photoPerPage);
     const firstPhoto = lastPhoto - photoPerPage;
-    const currentPhotos = images.slice(firstPhoto, lastPhoto);
+    //const [firstPhoto, setFirstPhoto] = useState(lastPhoto - photoPerPage);
+    const currentPhotos = array.slice(firstPhoto, lastPhoto);
+    //const [currentPhotos, setCurrentPhotos] = useState(images.slice(firstPhoto, lastPhoto));
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
 
@@ -86,41 +88,19 @@ export const Gallery = () => {
 
 
 
-            {iFilter === "all" ?
-                <div className="images">
-                    {currentPhotos.map(img => (
-                        <div key={img.id}>
-                            <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                        </div>
-                    ))}
-                </div>
-
-                :
-
-                <div className="images">
-                    {currentPhotos.map(img => {
-                        if (img.type === iFilter) {
-                            return <div key={img.id}>
-                                <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                            </div>
-                        }
-                    }
-                    )}
-                </div>
-            }
+            <div className="images">
+                {currentPhotos.map(img => (
+                    <div key={img.id}>
+                        <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                    </div>
+                ))}
+            </div>
 
             {click ? <>
-                <FullImg images={images} id={id} />
+                <FullImg images={array} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
-
-
-            {click3 ?
-                <div className="mobile-images">
-                    <h1>mobile images</h1>
-                </div> : null
-            }
-            <Paginator photoPerPage={photoPerPage} totalPhoto={images.length} paginate={paginate} />
+            <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
         </div>
     )
 }
