@@ -1,28 +1,53 @@
 .images {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
-  /* @media only screen and (max-width: 1280px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    @media only screen and (max-width: 1100px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    @media only screen and (max-width: 880px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    @media only screen and (max-width: 680px) {
-        display: none;
-    } */
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
   padding: 0 clamp(1rem, 10vw, 20rem);
+  -webkit-transition: padding .4s;
+  transition: padding .4s;
   gap: 1rem;
   overflow: hidden;
 }
 
+@media only screen and (max-width: 1280px) {
+  .images {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .images {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .images {
+    -webkit-transition: padding .4s;
+    transition: padding .4s;
+    padding: 0 clamp(2rem, 6vw, 15rem);
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .images {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .images {
+    display: none;
+  }
+}
+
 .images div {
   overflow: hidden;
-  width: 100%;
+  max-width: 100%;
   height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;

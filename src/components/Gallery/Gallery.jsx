@@ -29,6 +29,7 @@ export const Gallery = () => {
     const [click2, setClick2] = useState(false);//show filters
 
     const setFilterFn = (filter) => {
+        setCurrentPage(1);
         let temp = [];
         let i = 0;
         if (filter === "all") {
@@ -51,7 +52,7 @@ export const Gallery = () => {
     }
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [photoPerPage] = useState(14);
+    const [photoPerPage] = useState(12);
 
     const lastPhoto = currentPage * photoPerPage;
     const firstPhoto = lastPhoto - photoPerPage;
