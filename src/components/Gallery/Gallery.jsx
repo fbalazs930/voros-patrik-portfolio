@@ -27,23 +27,29 @@ export const Gallery = () => {
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
 
-    const [iFilter, setIFilter] = useState("all");
-
     const [click2, setClick2] = useState(false);//show filters
 
 
     const setFilterFn = (filter) => {
-        setIFilter(filter);
-        let i = 0;
         let temp = [];
-        array.map(img => {
-            if (img.type === iFilter) {
+        let i = 0;
+        if (filter === "all") {
+            setArray(images);
+            images.map(img => {
                 img.id = i;
                 temp.push(img);
-                console.log(img.id);
                 i++;
-            }
-        })
+            })
+        }
+        else {
+            images.map(img => {
+                if (img.type === filter) {
+                    img.id = i;
+                    temp.push(img);
+                    i++;
+                }
+            })
+        }
         setArray(temp);
     }
     const [currentPage, setCurrentPage] = useState(1);
@@ -97,10 +103,10 @@ export const Gallery = () => {
             </div>
 
             {click ? <>
-                <FullImg images={array} id={id} />
+                <FullImg images={currentPhotos} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
-            <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
+            <Paginator photoPerPage={photoPerPage} totalPhoto={currentPhotos.length} paginate={paginate} />
         </div>
     )
 }
