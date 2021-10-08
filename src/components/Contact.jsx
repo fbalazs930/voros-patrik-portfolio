@@ -1,5 +1,6 @@
-import React from 'react'
-import { Logos } from './Logos'
+import React from 'react';
+import { Logos } from './Logos';
+import { Email } from './Email';
 
 export const Contact = () => {
     return (
@@ -11,6 +12,7 @@ export const Contact = () => {
             <h1>Mobil: 062012345678</h1>
             <h1>stb</h1>
             <Logos />
+            <Email />
         </div>
     )
 }

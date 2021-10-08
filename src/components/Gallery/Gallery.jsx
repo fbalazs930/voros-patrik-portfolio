@@ -76,8 +76,8 @@ export const Gallery = () => {
                 {click2 ?
                     <div className="types">
                         <h2 onClick={() => { setFilterFn("all") }}>Mind</h2>
-                        <h2 onClick={() => { setFilterFn("portrait") }}>Portré</h2>
-                        <h2 onClick={() => { setFilterFn("gastro") }}>Kávé / gasztró</h2>
+                        <h2 onClick={() => { setFilterFn("portrait") }}>Portré / Modell</h2>
+                        <h2 onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
                         <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
                         <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                         <h2 onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>

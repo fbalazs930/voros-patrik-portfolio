@@ -130,7 +130,15 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  background: red;
+}
+
+@media only screen and (max-width: 768px) {
+  .filters .types {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .filters h2 {

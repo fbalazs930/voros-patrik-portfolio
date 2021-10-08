@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
-    const closeMenu = () => { setClick(false) };/* 
+    const closeMenu = () => { setClick(false) }; 
     window.addEventListener('resize', () => {
         if (window.innerWidth < 768) {
             setClick(false);
         }
-    }); */
+    });
     return (
         <div className='nav'>
             <i className="fas.fa-bars"></i>
@@ -19,7 +19,7 @@ const Nav = () => {
                 </Link>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <Link onClick={closeMenu} to='/rolam' className="nav-link">
+                <Link onClick={closeMenu} to='/' className="nav-link">
                     Rólam
                 </Link>
                 <Link onClick={closeMenu} to='/fotok' className="nav-link">
