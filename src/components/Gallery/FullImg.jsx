@@ -5,7 +5,7 @@ export const FullImg = (props) => {
     return (
         <Carousel autoFocus emulateTouch infiniteLoop useKeyboardArrows stopOnHover preventMovementUntilSwipeScrollTolerance selectedItem={props.id} swipeScrollTolerance={30}>
             {props.images.map(img => (
-                <img key={img.id} className="img" src={img.src} alt="portré" />
+                <img key={img.id} className="img" src={img.src} alt="kep" />
             ))}
         </Carousel>
     )

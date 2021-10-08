@@ -2,7 +2,7 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
-import featured from './Featured.jsx';
+import images from './Images';
 
 export const Prologue = () => {
     const [click, setClick] = useState(false);
@@ -20,20 +20,22 @@ export const Prologue = () => {
         window.addEventListener('keyup', exit);
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
-    
+
     return (
         <div className='p'>
             <h1>Kiemelt képek</h1>
             <div className="images">
-                {featured.map(img => (
-                    <div key={img.id}>
-                        <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                    </div>
-                ))}
+                {images.map(img => {
+                    if (img.isFeatured === true) {
+                        return <div key={img.id}>
+                            <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                        </div>
+                    }
+                })}
             </div>
 
             {click ? <>
-                <FullImg images={featured} id={id} />
+                <FullImg images={images} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
         </div>

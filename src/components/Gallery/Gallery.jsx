@@ -76,12 +76,11 @@ export const Gallery = () => {
                 {click2 ?
                     <div className="types">
                         <h2 onClick={() => { setFilterFn("all") }}>Mind</h2>
-                        <h2 onClick={() => { setFilterFn("portrait") }}>Portré / Modell</h2>
+                        <h2 onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
                         <h2 onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
                         <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
                         <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                         <h2 onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
-                        <h2 onClick={() => { setFilterFn("modell") }}>Modell</h2>
                     </div>
                     :
                     <div className="types">
@@ -101,7 +100,7 @@ export const Gallery = () => {
             </div>
 
             {click ? <>
-                <FullImg images={currentPhotos} id={id} />
+                <FullImg images={array} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
             <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
