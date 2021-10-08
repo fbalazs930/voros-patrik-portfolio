@@ -50,7 +50,7 @@ export const Gallery = () => {
         setArray(temp);
     }
 
-    /* const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
     const [photoPerPage] = useState(14);
 
     const lastPhoto = currentPage * photoPerPage;
@@ -59,7 +59,6 @@ export const Gallery = () => {
     const currentPhotos = array.slice(firstPhoto, lastPhoto);
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
- */
 
     return (
         <div className='gallery p'>
@@ -92,7 +91,7 @@ export const Gallery = () => {
 
 
             <div className="images">
-                {array.map(img => (
+                {currentPhotos.map(img => (
                     <div key={img.id}>
                         <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                     </div>
@@ -100,10 +99,10 @@ export const Gallery = () => {
             </div>
 
             {click ? <>
-                <FullImg images={array} id={id} />
+                <FullImg images={currentPhotos} id={id} />
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
-            {/* <Paginator photoPerPage={photoPerPage} totalPhoto={currentPhotos.length} paginate={paginate} /> */}            
+            <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
         </div>
     )
 }
