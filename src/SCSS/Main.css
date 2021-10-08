@@ -219,6 +219,15 @@ a {
   gap: 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .filters .types {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .filters h2 {
   cursor: pointer;
 }
@@ -565,8 +574,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 3px 6px -2px var(--dark);
-          box-shadow: 0 3px 6px -2px var(--dark);
+  -webkit-box-shadow: 0 3px 6px -2px var(--black);
+          box-shadow: 0 3px 6px -2px var(--black);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -638,7 +647,7 @@ a {
 
 @media only screen and (max-width: 768px) {
   .nav .nav-menu {
-    opacity: 0;
+    opacity: 1;
     height: 70vh;
     width: 100vw;
     top: 0;
@@ -653,7 +662,7 @@ a {
     gap: 0;
     padding: 100px 0;
     left: -1000px;
-    background-color: var(--dark);
+    background-color: var(--black);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }

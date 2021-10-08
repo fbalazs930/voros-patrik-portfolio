@@ -130,6 +130,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  background: red;
 }
 
 .filters h2 {

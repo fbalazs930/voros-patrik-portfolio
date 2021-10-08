@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
-    const closeMenu = () => { setClick(false) };
+    const closeMenu = () => { setClick(false) };/* 
     window.addEventListener('resize', () => {
-        setClick(false);
         if (window.innerWidth < 768) {
+            setClick(false);
         }
-    });
+    }); */
     return (
         <div className='nav'>
             <i className="fas.fa-bars"></i>
             <div className="logo">
                 <Link to='/'>
-                    <img src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="" />
+                    <img src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="logo" />
                 </Link>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -33,7 +33,7 @@ const Nav = () => {
                 </Link>
             </ul>
             <div className="menu-icon" onClick={handleClick}>
-                <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                <i className={click ? 'far fa-times-circle' : 'fas fa-bars'} />
             </div>
         </div>
 
