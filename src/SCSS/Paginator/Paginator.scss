@@ -1,20 +1,23 @@
-.paginator{
+.paginator {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:.5rem;
-    padding:2rem 0;
-    .page-number{
-        color:var(--black);
-        background-color: #adadad;
-        width:2rem;
+    gap: 0.5rem;
+    padding: 2rem 0;
+    .page-number {
+        color: var(--black);
+        background-color: #a5a5a5;
+        width: 2rem;
         text-align: center;
-        cursor:pointer;
-        transition: all .2s;
-        &:hover{
-            transition: all .2s;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+            transition: all 0.2s;
             background-color: #f1f1f1;
             color: #202020;
         }
+    }
+    .clicked{
+        background-color: #fff;
     }
 }

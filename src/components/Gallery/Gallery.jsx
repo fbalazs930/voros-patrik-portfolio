@@ -10,6 +10,7 @@ export const Gallery = () => {
     //CHANGING ARRAY FOR PAGINATOR
     const [array, setArray] = useState(images);
 
+    //#region bigImg
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
     const clickHandler = (id) => {
@@ -25,12 +26,39 @@ export const Gallery = () => {
         window.addEventListener('keyup', exit);
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
+    //#endregion
 
+    //#region Filters
     const [click2, setClick2] = useState(false);//show filters
+    const [selected, setSelected] = useState("");
 
     const setFilterFn = (filter) => {
         setClick2(false);
         setCurrentPage(1);
+
+        switch (filter) {
+            case "poDell":
+                setSelected("Portré / Modell");
+                break;
+            case "gastro":
+                setSelected("Gasztro");
+                break;
+            case "event":
+                setSelected("Városi rendezvény");
+                break;
+            case "landscape":
+                setSelected("Táj");
+                break;
+            case "fest":
+                setSelected("Fesztivál");
+                break;
+            case "all":
+                setSelected("");
+                break;
+            default: ;
+                break;
+        }
+
         let temp = [];
         let i = 0;
         if (filter === "all") {
@@ -51,7 +79,9 @@ export const Gallery = () => {
         }
         setArray(temp);
     }
+    //#endregion
 
+    //#region Paginator
     const [currentPage, setCurrentPage] = useState(1);
     const [photoPerPage] = useState(12);
 
@@ -61,6 +91,7 @@ export const Gallery = () => {
     const currentPhotos = array.slice(firstPhoto, lastPhoto);
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
+    //#endregion
 
     return (
         <div className='gallery p'>
@@ -75,12 +106,12 @@ export const Gallery = () => {
                 </div>
                 {click2 ?
                     <div className="types">
-                        <h2 onClick={() => { setFilterFn("all") }}>Mind</h2>
-                        <h2 onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
-                        <h2 onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
-                        <h2 onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
-                        <h2 onClick={() => { setFilterFn("landscape") }}>Táj</h2>
-                        <h2 onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("all") }}>Mind</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("landscape") }}>Táj</h2>
+                        <h2 className="filt" onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
                     </div>
                     :
                     <div className="types">
@@ -90,7 +121,7 @@ export const Gallery = () => {
             </div>
 
 
-
+            <h1>{selected}</h1>
             <div className="images">
                 {currentPhotos.map(img => (
                     <div key={img.id}>
