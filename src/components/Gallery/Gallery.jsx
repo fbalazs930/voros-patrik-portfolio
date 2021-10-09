@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
 import Paginator from '../Paginator';
+import SimpleImageSlider from "react-simple-image-slider";
 
 export const Gallery = () => {
 
@@ -93,6 +94,26 @@ export const Gallery = () => {
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
     //#endregion
 
+    const [mobile, setMobile] = useState(false);
+    const checkWidth = () => {
+        if (window.innerWidth < 600) {
+            setMobile(true);
+        }
+        else {
+            setMobile(false);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("resize", checkWidth)
+        return () => {
+            window.removeEventListener("resize", checkWidth);
+        }
+    }, [])
+
+    let mobileArray = [];
+    images.forEach(img => {
+        mobileArray.push({ url: img.src });
+    })
     return (
         <div className='gallery p'>
             <div>
@@ -121,20 +142,34 @@ export const Gallery = () => {
             </div>
 
 
-            <h1>{selected}</h1>
-            <div className="images">
-                {currentPhotos.map(img => (
-                    <div key={img.id}>
-                        <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                    </div>
-                ))}
-            </div>
 
-            {click ? <>
-                <FullImg images={array} id={id} />
-                <i className="fas fa-times" onClick={() => setClick(false)}></i>
-            </> : null}
-            <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
+            {mobile ?
+                 <SimpleImageSlider
+                     width={300}
+                     height={504}
+                     images={mobileArray}
+                 />
+                :
+
+                <>
+                    <h1>{selected}</h1>
+                    <div className="images">
+                        {currentPhotos.map(img => (
+                            <div key={img.id}>
+                                <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                            </div>
+                        ))}
+                    </div>
+
+                    {click ? <>
+                        <FullImg images={array} id={id} />
+                        <i className="fas fa-times" onClick={() => setClick(false)}></i>
+                    </> : null}
+                    <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
+                </>
+            }
+
+
         </div>
     )
 }

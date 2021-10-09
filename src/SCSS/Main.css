@@ -91,8 +91,8 @@ a {
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   padding: 0 clamp(1rem, 10vw, 20rem);
-  -webkit-transition: padding .4s;
-  transition: padding .4s;
+  -webkit-transition: padding 0.4s;
+  transition: padding 0.4s;
   gap: 1rem;
   overflow: hidden;
 }
@@ -113,8 +113,8 @@ a {
 
 @media only screen and (max-width: 940px) {
   .images {
-    -webkit-transition: padding .4s;
-    transition: padding .4s;
+    -webkit-transition: padding 0.4s;
+    transition: padding 0.4s;
     padding: 0 clamp(2rem, 6vw, 15rem);
   }
 }
@@ -238,7 +238,8 @@ a {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 99vw;
+  width: 90vw;
+  margin: auto;
   overflow-x: hidden;
   padding: 0;
   display: -webkit-box;
@@ -301,9 +302,26 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 600px) {
   .carousel-root {
     position: relative;
+    height: 80vh;
+    overflow: hidden;
+  }
+  .carousel-root .carousel-slider .slider-wrapper .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .carousel-root .carousel-slider .slider-wrapper .img {
+    height: auto;
+    width: 80vw;
   }
 }
 
