@@ -232,7 +232,7 @@ const images = [
         id: 38,
         src: 'https://i.postimg.cc/QxGTJfjh/19.jpg',
         type: 'landscape',
-        isFeatured: false
+        isFeatured: true
     },
     {
         id: 39,
@@ -394,7 +394,7 @@ const images = [
         id: 65,
         src: 'https://i.postimg.cc/GpQNzRJ7/IMG-4969.jpg',
         type: 'fest',
-        isFeatured: false
+        isFeatured: true
     },
     {
         id: 66,
@@ -454,7 +454,7 @@ const images = [
         id: 75,
         src: 'https://i.postimg.cc/nhKM2x01/5.jpg',
         type: 'gastro',
-        isFeatured: false
+        isFeatured: true
     },
     {
         id: 76,
@@ -538,7 +538,7 @@ const images = [
         id: 89,
         src: 'https://i.postimg.cc/zvn3Q1q5/27.jpg',
         type: 'event',
-        isFeatured: false
+        isFeatured: true
     },
     {
         id: 90,
