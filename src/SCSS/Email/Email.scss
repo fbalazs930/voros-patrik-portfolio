@@ -5,6 +5,7 @@
     position: fixed;
     bottom:20px;
     right: 20px;
+    z-index: 20;
     i{
         color:#3694eb;
         font-size: 4rem;
@@ -13,6 +14,9 @@
         bottom: 10px;
         right: 10px;
         z-index: 10;
+        &:hover{
+            color: #49a1f3;
+        }
     }
     form{
         padding: 1rem 0;
