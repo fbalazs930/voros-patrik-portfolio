@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 export const Email = () => {
@@ -11,18 +11,20 @@ export const Email = () => {
             }, (error) => {
                 alert("Sikertelen!");
             });
-        e.target.reset()
+        e.target.reset() ;
     }
+    const[click,setClick] = useState(false);
     return (
         <div className="email">
-            <h1>Küldj üzenetet</h1>
+            <i onClick={()=>{setClick(!click)}} className="fab fa-facebook-messenger"></i>
+            {click && 
             <form onSubmit={sendEmail}>
                 <input className='name' type="text" placeholder="Név" name="name" />
                 <input className='email' type="email" placeholder="E-mail cím" name="email" />
                 <input type="text" placeholder="Tárgy" name="subject" />
                 <textarea className='message' placeholder="Írj valamit..." name="message"></textarea>
                 <button className='send' type="submit">Küldés</button>
-            </form>
+            </form>}
         </div>
     )
 }

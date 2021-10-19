@@ -1,63 +1,21 @@
 .email {
-    padding:1rem;
-    h1{
-        padding: 0 0 2rem 0;
-    }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: calc(40vw + 3.5rem);
-        min-height: 50vh;
-        gap: 1rem;
-        @media only screen and (max-width: 1050px) {
-            width: calc(80vw + 3.5rem);
-        }
-        input,
-        textarea {
-            width: 80%;
-            height: 5vh;
-            border-radius: 5px;
-            outline: none;
-            border: none;
-            box-shadow: 0 0 0 1px #fff;
-            padding: 0.5rem;
-            background: var(--white);
-            color:#000;
-            &:focus {
-                box-shadow: 0 0 0 2px var(--third);
-            }
-        }
-        textarea {
-            resize: none;
-            min-height: 20vh;
-            line-height: 25px;
-            background: var(--white);
-        }
-        button {
-            cursor: pointer;
-            font-size: clamp(1rem, 4vw, 1.3rem);
-            background: var(--white);
-            color: var(--black);
-            border: 2px solid #fff;
-            padding: 0.8rem 1.3rem;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            transition: font-weight 0.3s;
-            &:hover {
-                transition: font-weight 0.3s;
-                font-weight: bold;
-                &::after {
-                    transition: all 0.3s ease-out;
-                    transform: skewX(-45deg) scale(1, 1);
-                }
-            }
-        }
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #3694eb;
+    position: fixed;
+    bottom:20px;
+    right: 10px;
+    min-height: 40vh;
+    min-width: 30vw;
+    dis
+    i{
+        color:#3694eb;
+        font-size: 4rem;
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
     }
 }

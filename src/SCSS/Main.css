@@ -481,103 +481,25 @@ a {
 }
 
 .email {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.email h1 {
-  padding: 0 0 2rem 0;
-}
-
-.email form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: calc(40vw + 3.5rem);
-  min-height: 50vh;
-  gap: 1rem;
-}
-
-@media only screen and (max-width: 1050px) {
-  .email form {
-    width: calc(80vw + 3.5rem);
-  }
-}
-
-.email form input,
-.email form textarea {
-  width: 80%;
-  height: 5vh;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-          box-shadow: 0 0 0 1px #fff;
-  padding: 0.5rem;
   background: var(--white);
-  color: #000;
-}
-
-.email form input:focus,
-.email form textarea:focus {
-  -webkit-box-shadow: 0 0 0 2px var(--third);
-          box-shadow: 0 0 0 2px var(--third);
-}
-
-.email form textarea {
-  resize: none;
-  min-height: 20vh;
-  line-height: 25px;
-  background: var(--white);
-}
-
-.email form button {
-  cursor: pointer;
-  font-size: clamp(1rem, 4vw, 1.3rem);
-  background: var(--white);
-  color: var(--black);
-  border: 2px solid #fff;
-  padding: 0.8rem 1.3rem;
-  position: relative;
-  z-index: 1;
+  border-radius: 10px;
   overflow: hidden;
-  -webkit-transition: font-weight 0.3s;
-  transition: font-weight 0.3s;
+  border: 1px solid #3694eb;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  min-height: 40vh;
+  min-width: 30vw;
 }
 
-.email form button:hover {
-  -webkit-transition: font-weight 0.3s;
-  transition: font-weight 0.3s;
-  font-weight: bold;
-}
-
-.email form button:hover::after {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  -webkit-transform: skewX(-45deg) scale(1, 1);
-          transform: skewX(-45deg) scale(1, 1);
+.email i {
+  color: #3694eb;
+  font-size: 4rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
 .nav {
