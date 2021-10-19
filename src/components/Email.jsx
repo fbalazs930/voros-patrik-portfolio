@@ -19,11 +19,11 @@ export const Email = () => {
             <i onClick={()=>{setClick(!click)}} className="fab fa-facebook-messenger"></i>
             {click && 
             <form onSubmit={sendEmail}>
-                <input className='name' type="text" placeholder="Név" name="name" />
-                <input className='email' type="email" placeholder="E-mail cím" name="email" />
+                <input className='nameI' type="text" placeholder="Név" name="name" />
+                <input className='emailI' type="email" placeholder="E-mail cím" name="email" />
                 <input type="text" placeholder="Tárgy" name="subject" />
-                <textarea className='message' placeholder="Írj valamit..." name="message"></textarea>
-                <button className='send' type="submit">Küldés</button>
+                <textarea className='messageI' placeholder="Írj valamit..." name="message"></textarea>
+                <button className='sendI' type="submit">Küldés</button>
             </form>}
         </div>
     )

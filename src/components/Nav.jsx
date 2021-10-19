@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
@@ -36,8 +36,6 @@ const Nav = () => {
                 <i className={click ? 'far fa-times-circle' : 'fas fa-bars'} />
             </div>
         </div>
-
-
     )
 }
 

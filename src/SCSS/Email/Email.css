@@ -1,23 +1,63 @@
 .email {
-  background: var(--white);
+  background: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #3694eb;
   position: fixed;
   bottom: 20px;
-  right: 10px;
-  min-height: 40vh;
-  min-width: 30vw;
+  right: 20px;
 }
 
-.email dis
-i {
+.email i {
   color: #3694eb;
   font-size: 4rem;
   cursor: pointer;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 10;
+}
+
+.email form {
+  padding: 1rem 0;
+  min-height: 40vh;
+  min-width: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.email form input, .email form textarea {
+  border: none;
+  border-bottom: 2px solid #3694eb;
+  color: #3694eb;
+  background-color: transparent;
+}
+
+.email form input:focus, .email form textarea:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.email form button {
+  padding: .6rem 1.1rem;
+  background-color: #3694eb;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.email form button:hover {
+  outline: 1px solid #fff;
 }
 /*# sourceMappingURL=Email.css.map */
