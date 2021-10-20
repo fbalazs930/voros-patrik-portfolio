@@ -92,6 +92,38 @@ export const Gallery = () => {
     const currentPhotos = array.slice(firstPhoto, lastPhoto);
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
+
+    /*@media only screen and (max-width: 1060px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    padding: 0 clamp(1rem, 10vw, 20rem);
+    transition: padding 0.4s;
+    @media only screen and (max-width: 940px) {
+        transition: padding 0.4s;
+        padding: 0 clamp(2rem, 6vw, 15rem);
+    }
+
+    @media only screen and (max-width: 740px) {
+        grid-template-columns: repeat(3, 1fr);
+    } */
+    const resize = ()=>{
+        if(window.innerWidth > 1060){
+            
+        }
+        else if(window.innerWidth < 1060){
+
+        }
+        else if(window.innerWidth < 940){
+
+        }
+        else if(window.innerWidth < 740){
+
+        }
+    }
+    useEffect(()=>{
+
+    },[])
+
     //#endregion
 
     const [mobile, setMobile] = useState(false);
