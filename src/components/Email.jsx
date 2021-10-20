@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 

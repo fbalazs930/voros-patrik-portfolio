@@ -8,32 +8,4 @@ div .images {
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
 }
-
-div .images div {
-  overflow: hidden;
-}
-
-div .images div img {
-  width: 100%;
-  height: 60vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
-div .images div img:hover {
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
 /*# sourceMappingURL=Prologue.css.map */
