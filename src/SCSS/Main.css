@@ -105,7 +105,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 1490px) {
+@media only screen and (max-width: 1530px) {
   .images {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
@@ -134,7 +134,7 @@ a {
           align-items: center;
 }
 
-@media only screen and (max-width: 1490px) {
+@media only screen and (max-width: 1530px) {
   .images .img-container {
     height: 38vh;
     width: 17rem;

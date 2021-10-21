@@ -103,7 +103,7 @@ export const Gallery = () => {
         if(window.innerWidth < 1760){
             setPhotoPerPage(10);
         }
-        if(window.innerWidth < 1490){
+        if(window.innerWidth < 1530){
             setPhotoPerPage(12);
         }
         if(window.innerWidth < 940){
