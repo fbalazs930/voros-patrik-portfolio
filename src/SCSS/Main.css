@@ -95,17 +95,17 @@ a {
       justify-content: space-around;
   place-items: center;
   gap: 1rem;
-  margin: 0 2.4rem;
+  margin: 0 3.4rem;
 }
 
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 1760px) {
   .images {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media only screen and (max-width: 1410px) {
+@media only screen and (max-width: 1490px) {
   .images {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
@@ -134,7 +134,7 @@ a {
           align-items: center;
 }
 
-@media only screen and (max-width: 1410px) {
+@media only screen and (max-width: 1490px) {
   .images .img-container {
     height: 38vh;
     width: 17rem;

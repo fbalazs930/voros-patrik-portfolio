@@ -2,10 +2,10 @@
 .images {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    @media only screen and (max-width: 1660px){
+    @media only screen and (max-width: 1760px){
         grid-template-columns: repeat(5, 1fr);
     }
-    @media only screen and (max-width: 1410px){
+    @media only screen and (max-width: 1490px){
         grid-template-columns: repeat(4, 1fr);
     }
     @media only screen and (max-width: 940px){
@@ -14,12 +14,12 @@
     justify-content: space-around;
     place-items: center;
     gap: 1rem;
-    margin:0 2.4rem;
+    margin:0 3.4rem;
     .img-container {
         overflow: hidden;
         height: 40vh;
         width: 18rem;
-        @media only screen and (max-width: 1410px){
+        @media only screen and (max-width: 1490px){
             height: 38vh;
             width: 17rem;
         }

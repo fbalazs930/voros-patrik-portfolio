@@ -22,17 +22,21 @@ export const Prologue = () => {
     }, [])
 
     let fImages = [];
-    images.forEach(img =>{
-        if(img.isFeatured === true){
-            fImages.push(img);
-        }
-    })
+    const[imgs,setImgs]=useState([]);
+    useEffect(()=>{
+        images.forEach(img =>{
+            if(img.isFeatured === true){
+                fImages.push(img);
+            }
+        })
+        setImgs(fImages);
+    }, [])
 
     return (
         <div className='prologue'>
             <h1>Kiemelt képek</h1>
             <div className="PRimages">
-                {fImages.map(img => {
+                {imgs.map(img => {
                     <div className="img-container" key={img.id}>
                     <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                 </div>
@@ -41,8 +45,8 @@ export const Prologue = () => {
 
             {click ? <>
                 <div className="fullImg">
-                            <FullImg images={fImages} id={id} />
-                        </div>
+                    <FullImg images={imgs} id={id} />
+                </div>
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
         </div>
