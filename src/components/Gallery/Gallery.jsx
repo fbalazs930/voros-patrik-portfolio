@@ -119,9 +119,13 @@ export const Gallery = () => {
     useEffect(() => {
         window.addEventListener("resize", checkWidth)
         window.addEventListener("load", checkWidth)
+        window.addEventListener("click", checkWidth)
+        window.addEventListener("mouseover", checkWidth)
         return () => {
             window.removeEventListener("resize", checkWidth);
-            window.addEventListener("load", checkWidth)
+            window.removeEventListener("load", checkWidth)
+            window.removeEventListener("click", checkWidth)
+            window.removeEventListener("mouseover", checkWidth)
         }
     }, [])
 

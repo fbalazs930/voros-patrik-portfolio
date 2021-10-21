@@ -478,8 +478,8 @@ a {
   border-radius: 10px;
   overflow: hidden;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   z-index: 20;
 }
 
@@ -488,8 +488,8 @@ a {
   font-size: 4rem;
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  right: 15px;
   z-index: 10;
 }
 
@@ -498,9 +498,8 @@ a {
 }
 
 .email form {
-  padding: 1rem 0;
-  min-height: 40vh;
-  min-width: 20vw;
+  min-height: calc(40vh - 5vw);
+  min-width: clamp(15rem, 60vw, 20rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,6 +512,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 1rem;
 }
 
 .email form input, .email form textarea {
@@ -520,6 +520,7 @@ a {
   border-bottom: 2px solid #3694eb;
   color: #3694eb;
   background-color: transparent;
+  font-size: .8rem;
 }
 
 .email form input:focus, .email form textarea:focus {
@@ -532,7 +533,7 @@ a {
   background-color: #3694eb;
   border: none;
   border-radius: 7px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   color: #fff;
 }
@@ -673,8 +674,8 @@ a {
   display: none;
   font-size: 30px;
   grid-area: menu-icon;
-  position: fixed;
-  top: 20px;
+  position: relative;
+  top: 0;
   right: 20px;
 }
 
