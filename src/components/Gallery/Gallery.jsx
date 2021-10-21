@@ -84,7 +84,7 @@ export const Gallery = () => {
 
     //#region Paginator
     const [currentPage, setCurrentPage] = useState(1);
-    const [photoPerPage] = useState(12);
+    const [photoPerPage, setPhotoPerPage] = useState(12);
 
     const lastPhoto = currentPage * photoPerPage;
     const firstPhoto = lastPhoto - photoPerPage;
@@ -128,6 +128,20 @@ export const Gallery = () => {
 
     const [mobile, setMobile] = useState(false);
     const checkWidth = () => {
+
+        if(window.innerWidth > 1660){
+            setPhotoPerPage(12);
+        }
+        if(window.innerWidth < 1660){
+            setPhotoPerPage(10);
+        }
+        if(window.innerWidth < 1410){
+            setPhotoPerPage(12);
+        }
+        if(window.innerWidth < 1205){
+            setPhotoPerPage(9);
+        }
+
         if (window.innerWidth < 600) {
             setMobile(true);
         }
@@ -146,6 +160,8 @@ export const Gallery = () => {
     images.forEach(img => {
         mobileArray.push({ url: img.src });
     })
+
+
     return (
         <div className='gallery p'>
             <div>
@@ -187,7 +203,7 @@ export const Gallery = () => {
                     <h1>{selected}</h1>
                     <div className="images">
                         {currentPhotos.map(img => (
-                            <div key={img.id}>
+                            <div className="img-container" key={img.id}>
                                 <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
                             </div>
                         ))}
