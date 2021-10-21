@@ -6,7 +6,7 @@ const Nav = () => {
     const handleClick = () => setClick(!click);
     const closeMenu = () => { setClick(false) }; 
     window.addEventListener('resize', () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 830) {
             setClick(false);
         }
     });

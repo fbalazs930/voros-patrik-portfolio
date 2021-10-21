@@ -19,6 +19,7 @@
   background: var(--black);
   overflow-x: hidden;
   color: #fafafa;
+  min-height: 100vh;
 }
 
 h1 {
@@ -623,10 +624,10 @@ a {
   border-bottom: 3px solid #eee;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 830px) {
   .nav .nav-menu {
     opacity: 1;
-    height: 70vh;
+    height: 40vh;
     width: 100vw;
     top: 0;
     position: fixed;
@@ -640,7 +641,7 @@ a {
     gap: 0;
     padding: 100px 0;
     left: -1000px;
-    background-color: var(--black);
+    background-color: #1f1f1fdf;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
@@ -671,9 +672,11 @@ a {
   display: none;
   font-size: 30px;
   grid-area: menu-icon;
+  position: relative;
+  top: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 830px) {
   .nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
