@@ -84,7 +84,7 @@
 @media only screen and (max-width: 830px) {
   .nav .nav-menu {
     opacity: 1;
-    height: 40vh;
+    height: 54vh;
     width: 100vw;
     top: 0;
     position: fixed;
@@ -98,7 +98,7 @@
     gap: 0;
     padding: 100px 0;
     left: -1000px;
-    background-color: #1f1f1fdf;
+    background-color: #3f3f3ff3;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
@@ -110,6 +110,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 1.3rem;
+    margin: 1rem 0;
   }
   .nav .nav-menu .nav-link:hover {
     border: none;
@@ -129,8 +130,9 @@
   display: none;
   font-size: 30px;
   grid-area: menu-icon;
-  position: relative;
-  top: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 @media only screen and (max-width: 830px) {

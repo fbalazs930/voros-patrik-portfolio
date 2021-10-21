@@ -45,7 +45,7 @@
         }
         @media only screen and (max-width: 830px) {
             opacity: 1;
-            height: 40vh;
+            height: 54vh;
             width: 100vw;
             top: 0;
             position: fixed;
@@ -54,12 +54,13 @@
             gap: 0;
             padding: 100px 0;
             left: -1000px;
-            background-color: #1f1f1fdf;
+            background-color: #3f3f3ff3;
             transition: all 0.2s ease-in-out;
             .nav-link {
                 display: flex;
                 justify-content: center;
                 font-size: 1.3rem;
+                margin:1rem 0;
                 &:hover {
                     border: none;
                 }
@@ -77,8 +78,9 @@
         display: none;
         font-size: 30px;
         grid-area: menu-icon;
-        position: relative;
-        top: 0;
+        position: fixed;
+        top: 20px;
+        right:20px;
         @media only screen and (max-width: 830px) {
             display: flex;
             justify-content: flex-end;
