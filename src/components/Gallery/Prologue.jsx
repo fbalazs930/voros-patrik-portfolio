@@ -21,21 +21,28 @@ export const Prologue = () => {
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
 
+    let fImages = [];
+    images.forEach(img =>{
+        if(img.isFeatured === true){
+            fImages.push(img);
+        }
+    })
+
     return (
-        <div className='p'>
+        <div className='prologue'>
             <h1>Kiemelt képek</h1>
-            <div className="images">
-                {images.map(img => {
-                    if (img.isFeatured === true) {
-                        return <div key={img.id}>
-                            <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                        </div>
-                    }
+            <div className="PRimages">
+                {fImages.map(img => {
+                    <div className="img-container" key={img.id}>
+                    <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                </div>
                 })}
             </div>
 
             {click ? <>
-                <FullImg images={images} id={id} />
+                <div className="fullImg">
+                            <FullImg images={fImages} id={id} />
+                        </div>
                 <i className="fas fa-times" onClick={() => setClick(false)}></i>
             </> : null}
         </div>
