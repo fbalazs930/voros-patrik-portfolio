@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
 import Paginator from '../Paginator';
-import SimpleImageSlider from "react-simple-image-slider";
 
 export const Gallery = () => {
 
@@ -93,37 +92,6 @@ export const Gallery = () => {
 
     const paginate = (pageNumber) => { setCurrentPage(pageNumber) };
 
-    /*@media only screen and (max-width: 1060px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    padding: 0 clamp(1rem, 10vw, 20rem);
-    transition: padding 0.4s;
-    @media only screen and (max-width: 940px) {
-        transition: padding 0.4s;
-        padding: 0 clamp(2rem, 6vw, 15rem);
-    }
-
-    @media only screen and (max-width: 740px) {
-        grid-template-columns: repeat(3, 1fr);
-    } */
-    const resize = ()=>{
-        if(window.innerWidth > 1060){
-            
-        }
-        else if(window.innerWidth < 1060){
-
-        }
-        else if(window.innerWidth < 940){
-
-        }
-        else if(window.innerWidth < 740){
-
-        }
-    }
-    useEffect(()=>{
-
-    },[])
-
     //#endregion
 
     const [mobile, setMobile] = useState(false);
@@ -138,11 +106,10 @@ export const Gallery = () => {
         if(window.innerWidth < 1410){
             setPhotoPerPage(12);
         }
-        if(window.innerWidth < 1205){
+        if(window.innerWidth < 940){
             setPhotoPerPage(9);
         }
-
-        if (window.innerWidth < 600) {
+        if (window.innerWidth < 830) {
             setMobile(true);
         }
         else {
@@ -151,15 +118,12 @@ export const Gallery = () => {
     }
     useEffect(() => {
         window.addEventListener("resize", checkWidth)
+        window.addEventListener("load", checkWidth)
         return () => {
             window.removeEventListener("resize", checkWidth);
+            window.addEventListener("load", checkWidth)
         }
     }, [])
-
-    let mobileArray = [];
-    images.forEach(img => {
-        mobileArray.push({ url: img.src });
-    })
 
 
     return (
@@ -192,13 +156,12 @@ export const Gallery = () => {
 
 
             {mobile ?
-                 <SimpleImageSlider
-                     width={300}
-                     height={504}
-                     images={mobileArray}
-                 />
+                 <>
+                    <div className="mobileGallery">
+                            <FullImg images={array} id={id} />
+                    </div>
+                </>
                 :
-
                 <>
                     <h1>{selected}</h1>
                     <div className="images">
@@ -210,14 +173,14 @@ export const Gallery = () => {
                     </div>
 
                     {click ? <>
-                        <FullImg images={array} id={id} />
+                        <div className="fullImg">
+                            <FullImg images={array} id={id} />
+                        </div>
                         <i className="fas fa-times" onClick={() => setClick(false)}></i>
                     </> : null}
                     <Paginator photoPerPage={photoPerPage} totalPhoto={array.length} paginate={paginate} />
                 </>
             }
-
-
         </div>
     )
 }

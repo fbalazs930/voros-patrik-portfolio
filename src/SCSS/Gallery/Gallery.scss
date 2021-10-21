@@ -8,16 +8,13 @@
     @media only screen and (max-width: 1410px){
         grid-template-columns: repeat(4, 1fr);
     }
-    @media only screen and (max-width: 1205px){
-        grid-template-columns: repeat(3, 1fr);
-    }
     @media only screen and (max-width: 940px){
         grid-template-columns: repeat(3, 1fr);
     }
     justify-content: space-around;
     place-items: center;
     gap: 1rem;
-    margin:0 2rem;
+    margin:0 2.4rem;
     .img-container {
         overflow: hidden;
         height: 40vh;
@@ -27,14 +24,23 @@
             width: 17rem;
         }
         @media only screen and (max-width: 1205px){
-            height: 43vh;
-            width: 17rem;
+            height: 35vh;
+            width: 15rem;
+        }
+        @media only screen and (max-width: 1080px){
+            height: 38vh;
+            width: 13rem;
+        }
+        @media only screen and (max-width: 940px){
+            height: 36vh;
+            width: 15.5rem;
         }
         display: flex;
         justify-content: center;
         align-items: center;
         img{
             object-fit: contain;
+            cursor: pointer;
         }
     }
 }
@@ -71,84 +77,86 @@
     }
 }
 
-.carousel-root {
-    z-index: 40;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 99vw;
-    margin: auto;
-    overflow-x: hidden;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(20, 20, 20, 0.842);
-    .carousel {
-        display: none;
-    }
-    .carousel-slider {
+.fullImg{
+    .carousel-root {
+        z-index: 40;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 99vw;
+        margin: auto;
+        overflow-x: hidden;
         padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        .slider-wrapper {
+        background: rgba(20, 20, 20, 0.842);
+        .carousel {
+            display: none;
+        }
+        .carousel-slider {
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            .img {
-                height: 90vh;
-                width: auto;
-                object-fit: contain;
-                cursor: pointer;
-            }
-        }
-    }
-    .slider .animated {
-        display: none;
-    }
-
-    .carousel-status,
-    .control-dots,
-    .thumbs-wrapper {
-        display: none;
-    }
-    @media only screen and (max-width: 600px) {
-        position: relative;
-        height: 80vh;
-        overflow: hidden;
-        .carousel-slider {
             .slider-wrapper {
-                .slider{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 .img {
-                    height: auto;
-                    width: 80vw;
+                    height: 90vh;
+                    width: auto;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+        }
+        .slider .animated {
+            display: none;
+        }
+    
+        .carousel-status,
+        .control-dots,
+        .thumbs-wrapper {
+            display: none;
+        }
+        @media only screen and (max-width: 600px) {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            .carousel-slider {
+                .slider-wrapper {
+                    .slider{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .img {
+                        height: auto;
+                        width: 80vw;
+                    }
                 }
             }
         }
     }
-}
-.fa-times {
-    color: #858585;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 0.75rem;
-    font-size: 1.3rem;
-    transition: all 0.5s;
-    cursor: pointer;
-    &:hover {
-        color: #d3d3d3;
-        transition: all 0.3s;
-    }
-    @media only screen and (max-width: 680px) {
-        display: none;
+    .fa-times {
+        color: #858585;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0.75rem;
+        font-size: 1.3rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+            color: #d3d3d3;
+            transition: all 0.3s;
+        }
+        @media only screen and (max-width: 680px) {
+            display: none;
+        }
     }
 }

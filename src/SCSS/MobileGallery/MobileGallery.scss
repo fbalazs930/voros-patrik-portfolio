@@ -1,0 +1,43 @@
+.mobileGallery{
+    .carousel-root {
+        min-height: 40vh;
+        width: 98vw;
+        overflow-x: hidden;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin:0 auto;
+        .carousel {
+            display: none;
+        }
+        .carousel-slider {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .slider-wrapper {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img {
+                    height: 50vh;
+                    object-fit: contain;
+                    cursor: pointer;
+                    padding:0 2rem;
+                }
+            }
+        }
+        .slider .animated {
+            display: none;
+        }
+    
+        .carousel-status,
+        .control-dots,
+        .thumbs-wrapper {
+            display: none;
+        }
+    }
+}

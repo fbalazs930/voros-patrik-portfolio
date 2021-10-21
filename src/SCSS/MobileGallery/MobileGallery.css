@@ -1,0 +1,66 @@
+.mobileGallery .carousel-root {
+  min-height: 40vh;
+  width: 98vw;
+  overflow-x: hidden;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mobileGallery .carousel-root .carousel {
+  display: none;
+}
+
+.mobileGallery .carousel-root .carousel-slider {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mobileGallery .carousel-root .carousel-slider .slider-wrapper {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mobileGallery .carousel-root .carousel-slider .slider-wrapper .img {
+  height: 50vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+
+.mobileGallery .carousel-root .slider .animated {
+  display: none;
+}
+
+.mobileGallery .carousel-root .carousel-status,
+.mobileGallery .carousel-root .control-dots,
+.mobileGallery .carousel-root .thumbs-wrapper {
+  display: none;
+}
+/*# sourceMappingURL=MobileGallery.css.map */
