@@ -2,7 +2,7 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
-import images from './Images';
+import fImages from './fImages';
 
 export const Prologue = () => {
     const [click, setClick] = useState(false);
@@ -21,34 +21,57 @@ export const Prologue = () => {
         return () => { window.removeEventListener('keyup', exit) }
     }, [])
 
-    let fImages = [];
-    const[imgs,setImgs]=useState([]);
-    useEffect(()=>{
-        images.forEach(img =>{
-            if(img.isFeatured === true){
-                fImages.push(img);
-            }
-        })
-        setImgs(fImages);
+    const [mobile, setMobile] = useState(false);
+    const checkWidth = () => {
+        if (window.innerWidth < 830) {
+            setMobile(true);
+        }
+        else {
+            setMobile(false);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("load", checkWidth)
+        window.addEventListener("resize", checkWidth)
+        window.addEventListener("click", checkWidth)
+        window.addEventListener("mouseover", checkWidth)
+        return () => {
+            window.removeEventListener("load", checkWidth)
+            window.removeEventListener("resize", checkWidth);
+            window.removeEventListener("click", checkWidth)
+            window.removeEventListener("mouseover", checkWidth)
+        }
     }, [])
 
     return (
-        <div className='prologue'>
-            <h1>Kiemelt képek</h1>
-            <div className="PRimages">
-                {imgs.map(img => {
-                    <div className="img-container" key={img.id}>
-                    <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+        <div className='gallery p'>
+            {mobile ?
+                <div className="mobileGallery">
+                    <FullImg images={fImages} id={id} />
                 </div>
-                })}
-            </div>
 
-            {click ? <>
-                <div className="fullImg">
-                    <FullImg images={imgs} id={id} />
-                </div>
-                <i className="fas fa-times" onClick={() => setClick(false)}></i>
-            </> : null}
+                :
+
+                <>  
+                    
+                    <h1>Kiemelt fotók</h1>
+                    <br />
+                    <div className="images">
+                        {fImages.map(img => (
+                            <div className="img-container" key={img.id}>
+                                <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                            </div>
+                        ))}
+                    </div>
+
+                    {click ? <>
+                        <div className="fullImg">
+                            <FullImg images={fImages} id={id} />
+                        </div>
+                        <i className="fas fa-times" onClick={() => setClick(false)}></i>
+                    </> : null}
+                </>
+            }
         </div>
     )
 }
