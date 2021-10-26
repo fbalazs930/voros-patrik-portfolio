@@ -68,7 +68,7 @@ export const Prologue = () => {
                         <div className="fullImg">
                             <FullImg images={fImages} id={id} />
                         </div>
-                        <i className="fas fa-times" onClick={() => setClick(false)}></i>
+                        <i className="fas fa-times" onClick={() => setClick(false)}/>
                     </> : null}
                 </>
             }

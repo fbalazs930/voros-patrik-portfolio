@@ -7,4 +7,17 @@
     h1 {
         font-size: 1.2rem;
     }
+    .c{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        transition: font-weight .15s;
+        &:hover{
+            font-weight: bold;
+            transition: font-weight .15s;i{
+                color: var(--third);
+            }    
+        }
+    }
 }

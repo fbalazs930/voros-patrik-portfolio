@@ -38,6 +38,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 2rem;
+    margin: 0 0 5rem 0;
   }
 }
 

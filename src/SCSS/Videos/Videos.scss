@@ -1,10 +1,23 @@
 .videos {
     min-height: 90vh;
-    .videos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+    .video {
         display: flex;
-        align-items: center;
         justify-content: center;
-        .video {
+        align-items: center;
+        width: 50vw;
+        height:30rem;
+        background: #000;
+        position: relative;
+        iframe{
+            position: relative;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
         }
     }
 }

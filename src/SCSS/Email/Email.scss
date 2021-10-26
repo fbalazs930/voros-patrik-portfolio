@@ -7,7 +7,7 @@
     right: 25px;
     z-index: 20;
     i{
-        color:#3694eb;
+        color: var(--third);
         font-size: clamp(1.1rem, 10vw, 4rem);
         cursor: pointer;
         position: fixed;
@@ -15,7 +15,7 @@
         right: 15px;
         z-index: 10;
         &:hover{
-            color: #49a1f3;
+            color: hsl(160, 55%, 70%);
         }
     }
     form{
@@ -28,7 +28,7 @@
         padding:1rem;
         input, textarea{
             border: none;
-            border-bottom: 2px solid #3694eb;
+            border-bottom: 2px solid var(--third);
             color:#3694eb;
             background-color: transparent;
             font-size: .8rem;
@@ -40,7 +40,7 @@
         }
         button{
             padding: .6rem 1.1rem;
-            background-color: #3694eb;
+            background-color: var(--third);
             border:none;
             border-radius: 7px;
             font-size: 1rem;

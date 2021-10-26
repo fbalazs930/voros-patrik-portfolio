@@ -9,7 +9,7 @@
 }
 
 .email i {
-  color: #3694eb;
+  color: var(--third);
   font-size: clamp(1.1rem, 10vw, 4rem);
   cursor: pointer;
   position: fixed;
@@ -19,7 +19,7 @@
 }
 
 .email i:hover {
-  color: #49a1f3;
+  color: #88ddc1;
 }
 
 .email form {
@@ -42,7 +42,7 @@
 
 .email form input, .email form textarea {
   border: none;
-  border-bottom: 2px solid #3694eb;
+  border-bottom: 2px solid var(--third);
   color: #3694eb;
   background-color: transparent;
   font-size: .8rem;
@@ -56,7 +56,7 @@
 
 .email form button {
   padding: .6rem 1.1rem;
-  background-color: #3694eb;
+  background-color: var(--third);
   border: none;
   border-radius: 7px;
   font-size: 1rem;

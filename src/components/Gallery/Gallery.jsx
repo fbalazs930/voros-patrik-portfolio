@@ -137,7 +137,7 @@ export const Gallery = () => {
             </div>
 
             <div className="filters show">
-                <div className="top" onClick={() => setClick2(!click2)}>
+                <div className="top" onClick={() => {setClick2(!click2)}}>
                     <i className="fas fa-filter"></i>
                     <h2>Szűrés</h2>
                 </div>
@@ -148,7 +148,9 @@ export const Gallery = () => {
                         <h2 className="filt" onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
                         <h2 className="filt" onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                         <h2 className="filt" onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
-                    </div>
+                </div>
+                <br />
+                <br />
             </div>
 
 
@@ -157,6 +159,7 @@ export const Gallery = () => {
                  <>
                     <div className="mobileGallery">
                         <h1>{selected}</h1>
+                        <br />
                         <FullImg images={array} id={id} />
                     </div>
                 </>
