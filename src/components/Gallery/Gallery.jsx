@@ -117,13 +117,13 @@ export const Gallery = () => {
         }
     }
     useEffect(() => {
-        window.addEventListener("resize", checkWidth)
         window.addEventListener("load", checkWidth)
+        window.addEventListener("resize", checkWidth)
         window.addEventListener("click", checkWidth)
         window.addEventListener("mouseover", checkWidth)
         return () => {
-            window.removeEventListener("resize", checkWidth);
             window.removeEventListener("load", checkWidth)
+            window.removeEventListener("resize", checkWidth);
             window.removeEventListener("click", checkWidth)
             window.removeEventListener("mouseover", checkWidth)
         }
@@ -136,13 +136,12 @@ export const Gallery = () => {
                 <h1>Fotók</h1>
             </div>
 
-            <div className="filters">
+            <div className="filters show">
                 <div className="top" onClick={() => setClick2(!click2)}>
                     <i className="fas fa-filter"></i>
                     <h2>Szűrés</h2>
                 </div>
-                {click2 ?
-                    <div className="types">
+                <div className={click2 ? 'filters show' : 'filters hide'}>
                         <h2 className="filt" onClick={() => { setFilterFn("all") }}>Mind</h2>
                         <h2 className="filt" onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
                         <h2 className="filt" onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
@@ -150,11 +149,6 @@ export const Gallery = () => {
                         <h2 className="filt" onClick={() => { setFilterFn("landscape") }}>Táj</h2>
                         <h2 className="filt" onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
                     </div>
-                    :
-                    <div className="types">
-                        &nbsp;
-                    </div>
-                }
             </div>
 
 
@@ -162,7 +156,8 @@ export const Gallery = () => {
             {mobile ?
                  <>
                     <div className="mobileGallery">
-                            <FullImg images={array} id={id} />
+                        <h1>{selected}</h1>
+                        <FullImg images={array} id={id} />
                     </div>
                 </>
                 :

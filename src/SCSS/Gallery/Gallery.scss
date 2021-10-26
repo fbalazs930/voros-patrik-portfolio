@@ -1,46 +1,35 @@
-
+.gallery{
+    h1{
+        margin: 3.3rem 0 0 0;
+    }
+    padding:0 0 2rem 0;
+}
 .images {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    @media only screen and (max-width: 1760px){
-        grid-template-columns: repeat(5, 1fr);
-    }
-    @media only screen and (max-width: 1530px){
-        grid-template-columns: repeat(4, 1fr);
-    }
-    @media only screen and (max-width: 940px){
-        grid-template-columns: repeat(3, 1fr);
-    }
-    justify-content: space-around;
-    place-items: center;
-    gap: 1rem;
-    margin:0 3.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap:1.2rem;
+    padding:0 2rem;
     .img-container {
         overflow: hidden;
-        height: 40vh;
-        width: 18rem;
-        @media only screen and (max-width: 1530px){
-            height: 38vh;
-            width: 17rem;
-        }
-        @media only screen and (max-width: 1205px){
-            height: 35vh;
-            width: 15rem;
-        }
-        @media only screen and (max-width: 1080px){
-            height: 38vh;
-            width: 13rem;
-        }
-        @media only screen and (max-width: 940px){
-            height: 36vh;
-            width: 15.5rem;
-        }
+        height: 20rem;
+        width: 14rem;
         display: flex;
         justify-content: center;
         align-items: center;
         img{
+            height: 110%;
+            width: auto;
             object-fit: contain;
             cursor: pointer;
+            transform: scale(1.2);
+            transition: transform .3s;
+            &:hover{
+                transform: scale(1);
+                transition: transform .3s;
+            }
         }
     }
 }
@@ -49,16 +38,20 @@
     font-size: 0.75rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 3rem 0;
+    padding:3rem 0 0 0;
+    overflow: hidden;
+    transition: min-height .3s;
+    transition: height .3s;
     .top {
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        font-size: .95rem;
     }
     i {
         font-size: 1.2rem;
@@ -72,9 +65,25 @@
             flex-direction: column;
         }
     }
-    h2 {
+    .filt {
         cursor: pointer;
+        font-size: 400;
+        transition: border-bottom .2s;
+        &:hover{
+            border-bottom: 1px solid #fff;
+            transition: border-bottom .2s;
+        }
     }
+}
+.show{
+    transition: min-height .3s;
+    transition: height .3s;
+    min-height: 20vh;
+}
+.hide{
+    transition: min-height .3s;
+    transition: height .3s;
+    height: 0;
 }
 
 .fullImg{

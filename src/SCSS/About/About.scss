@@ -22,6 +22,11 @@
                 margin: 0 0 0.75rem 0;
                 font-weight: bold;
             }
+            hr{
+                height: 1px;
+                color: rgba(102, 102, 102, 0.815);
+                margin: 1rem 0 1rem 0;
+            }
         }
         .own-portrait {
             width: clamp(15rem, 20vw, 40rem);

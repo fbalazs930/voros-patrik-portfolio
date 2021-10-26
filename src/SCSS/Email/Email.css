@@ -10,7 +10,7 @@
 
 .email i {
   color: #3694eb;
-  font-size: 4rem;
+  font-size: clamp(1.1rem, 10vw, 4rem);
   cursor: pointer;
   position: fixed;
   bottom: 15px;
@@ -46,6 +46,7 @@
   color: #3694eb;
   background-color: transparent;
   font-size: .8rem;
+  resize: none;
 }
 
 .email form input:focus, .email form textarea:focus {

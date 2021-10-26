@@ -47,6 +47,12 @@
   font-weight: bold;
 }
 
+.about .bottom .text hr {
+  height: 1px;
+  color: rgba(102, 102, 102, 0.815);
+  margin: 1rem 0 1rem 0;
+}
+
 .about .bottom .own-portrait {
   width: clamp(15rem, 20vw, 40rem);
   height: auto;

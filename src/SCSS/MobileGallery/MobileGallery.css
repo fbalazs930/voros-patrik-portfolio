@@ -1,3 +1,8 @@
+.mobileGallery {
+  position: relative;
+  bottom: 4rem;
+}
+
 .mobileGallery .carousel-root {
   min-height: 40vh;
   width: 98vw;
