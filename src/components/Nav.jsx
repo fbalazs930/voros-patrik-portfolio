@@ -15,7 +15,7 @@ const Nav = () => {
             <i className="fas.fa-bars"></i>
             <div className="logo">
                 <Link to='/'>
-                    <img src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="logo" />
+                    <img className="logo-img" src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="logo" />
                 </Link>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>

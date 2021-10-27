@@ -1,14 +1,16 @@
 .contact {
-  min-height: 90vh;
+  min-height: 79vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
   color: #fafafa;
   padding: 16rem 0;
+  gap: 3rem;
+  font-size: 1.2rem;
 }
 
 .contact h1 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .contact .c {
@@ -21,7 +23,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 1.1rem;
   -webkit-transition: font-weight .15s;
   transition: font-weight .15s;
 }

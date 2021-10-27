@@ -11,8 +11,8 @@
         justify-content: center;
         align-items: center;
         gap: 3rem;
-        padding: 3rem 0;
-        @media only screen and (max-width: 755px) {
+        padding: 4rem 0;
+        @media only screen and (max-width: 1024px) {
             flex-direction: column;
             gap: 2rem;
             margin: 0 0 5rem 0;
@@ -22,6 +22,7 @@
                 line-height: 30px;
                 margin: 0 0 0.75rem 0;
                 font-weight: bold;
+                font-size: clamp(.9rem, 2vw, 1.1rem);
             }
             hr{
                 height: 1px;
@@ -30,7 +31,7 @@
             }
         }
         .own-portrait {
-            width: clamp(15rem, 20vw, 40rem);
+            width: clamp(20rem, 20vw, 35rem);
             height: auto;
             object-fit: contain;
         }

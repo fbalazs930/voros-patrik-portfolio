@@ -1,17 +1,19 @@
 .contact {
-    min-height: 90vh;
+    min-height: 79vh;
     display: grid;
     place-items: center;
     color: #fafafa;
     padding: 16rem 0;
+    gap:3rem;
+    font-size: 1.2rem;
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
     .c{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap:1rem;
+        gap:1.1rem;
         transition: font-weight .15s;
         &:hover{
             font-weight: bold;
