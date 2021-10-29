@@ -13,11 +13,7 @@ const Nav = () => {
     return (
         <div className='nav'>
             <i className="fas.fa-bars"></i>
-            <div className="logo">
-                <Link to='/'>
-                    <img className="logo-img" src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="logo" />
-                </Link>
-            </div>
+            <img src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png" alt="logo" className="logo" />
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <Link onClick={closeMenu} to='/' className="nav-link">
                     Rólam

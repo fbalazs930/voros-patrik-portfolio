@@ -97,6 +97,13 @@ export const Gallery = () => {
     const [mobile, setMobile] = useState(false);
     const checkWidth = () => {
 
+        if (window.innerWidth < 830) {
+            setMobile(true);
+        }
+        else {
+            setMobile(false);
+        }
+        
         if(window.innerWidth > 1760){
             setPhotoPerPage(12);
         }
@@ -108,12 +115,6 @@ export const Gallery = () => {
         }
         if(window.innerWidth < 940){
             setPhotoPerPage(9);
-        }
-        if (window.innerWidth < 830) {
-            setMobile(true);
-        }
-        else {
-            setMobile(false);
         }
     }
     useEffect(() => {
