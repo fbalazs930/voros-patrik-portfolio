@@ -4,7 +4,6 @@
     align-items: center;
     flex-direction: column;
     max-width: 80vw;
-    min-height: 90vh;
     margin: auto;
     .bottom {
         display: flex;
@@ -22,7 +21,7 @@
                 line-height: 30px;
                 margin: 0 0 0.75rem 0;
                 font-weight: bold;
-                font-size: clamp(.9rem, 2vw, 1.1rem);
+                font-size: clamp(.8rem, 2vw, 1rem);
             }
             hr{
                 height: 1px;

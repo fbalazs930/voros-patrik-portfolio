@@ -1,25 +1,26 @@
 .contact {
-    min-height: 79vh;
-    display: grid;
-    place-items: center;
-    color: #fafafa;
-    padding: 16rem 0;
-    gap:3rem;
+    height: 79vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.3rem;
     font-size: 1.2rem;
     h1 {
         font-size: 1.6rem;
     }
-    .c{
+    .c {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap:1.1rem;
-        transition: font-weight .15s;
-        &:hover{
+        gap: 1.1rem;
+        transition: font-weight 0.15s;
+        &:hover {
             font-weight: bold;
-            transition: font-weight .15s;i{
+            transition: font-weight 0.15s;
+            i {
                 color: var(--third);
-            }    
+            }
         }
     }
 }

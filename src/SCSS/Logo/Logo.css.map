@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,wBAAwB;CAClC",
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,OAAO;EACf,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,wBAAwB;CAClC",
     "sources": [
         "Logo.scss"
     ],

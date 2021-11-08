@@ -1,4 +1,5 @@
 .logo {
+  cursor: pointer;
   height: auto;
   width: clamp(7rem, 20vw, 12rem);
 }
