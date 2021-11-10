@@ -5,12 +5,12 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    width: 70vw;
     margin: 0 auto;
     .video-wrap {
         max-width: 949px;
         width: 100%;
         margin: 0 auto;
+        padding:2rem;
     }
 
     .video-container {

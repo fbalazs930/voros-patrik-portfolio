@@ -41,6 +41,22 @@
   }
 }
 
+.about .bottom .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about .bottom .text p {
   line-height: 30px;
   margin: 0 0 0.75rem 0;
@@ -48,16 +64,19 @@
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-.about .bottom .text hr {
+.about .bottom .text .hr {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #fafafa;
   height: 1px;
-  color: rgba(102, 102, 102, 0.815);
-  margin: 1rem 0 1rem 0;
+  margin: 0 0 13px 0;
 }
 
 .about .bottom .own-portrait {
-  width: clamp(20rem, 20vw, 35rem);
+  width: clamp(17rem, 20vw, 35rem);
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=About.css.map */

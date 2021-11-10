@@ -9,7 +9,8 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
-  padding: 2rem 0;
+  position: relative;
+  top: -2rem;
 }
 
 .paginator .page-number {

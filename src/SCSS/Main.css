@@ -111,12 +111,8 @@ a {
   color: var(--third);
 }
 
-.gallery {
-  padding: 0 0 2rem 0;
-}
-
 .gallery h1 {
-  margin: 3.3rem 0 0 0;
+  margin: 2rem 0 .5rem 0;
 }
 
 .images {
@@ -125,7 +121,6 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -133,7 +128,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.2rem;
-  padding: 0 2rem;
+  padding: 0 0 2rem 0;
+  position: relative;
+  top: -2rem;
 }
 
 .images .img-container {
@@ -190,7 +187,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  padding: 3rem 0 0 0;
+  padding: 2rem 0 0 0;
   overflow: hidden;
   -webkit-transition: min-height .3s;
   transition: min-height .3s;
@@ -257,7 +254,7 @@ a {
   transition: min-height .3s;
   -webkit-transition: height .3s;
   transition: height .3s;
-  min-height: 20vh;
+  min-height: 10vh;
 }
 
 .hide {
@@ -266,6 +263,7 @@ a {
   -webkit-transition: height .3s;
   transition: height .3s;
   height: 0;
+  display: none;
 }
 
 .fullImg .carousel-root {
@@ -429,6 +427,22 @@ a {
   }
 }
 
+.about .bottom .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about .bottom .text p {
   line-height: 30px;
   margin: 0 0 0.75rem 0;
@@ -436,17 +450,20 @@ a {
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-.about .bottom .text hr {
+.about .bottom .text .hr {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #fafafa;
   height: 1px;
-  color: rgba(102, 102, 102, 0.815);
-  margin: 1rem 0 1rem 0;
+  margin: 0 0 13px 0;
 }
 
 .about .bottom .own-portrait {
-  width: clamp(20rem, 20vw, 35rem);
+  width: clamp(17rem, 20vw, 35rem);
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 20px;
 }
 
 .socials {
@@ -529,7 +546,7 @@ a {
 
 .email i {
   color: var(--third);
-  font-size: clamp(1.1rem, 10vw, 4rem);
+  font-size: clamp(1.1rem, 8vw, 3rem);
   cursor: pointer;
   position: fixed;
   bottom: 15px;
@@ -624,7 +641,7 @@ a {
   margin: 0 auto 0 0;
 }
 
-.nav .logo a img {
+.nav .logo img {
   cursor: pointer;
   width: 9rem;
 }
@@ -659,7 +676,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp(1rem, 4vw, 1.4rem);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   -webkit-transition: border-bottom 0.1s ease-in-out;
   transition: border-bottom 0.1s ease-in-out;
 }
@@ -754,7 +771,6 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  width: 70vw;
   margin: 0 auto;
 }
 
@@ -762,6 +778,7 @@ a {
   max-width: 949px;
   width: 100%;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .videos .video-container {
@@ -790,7 +807,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
-  padding: 2rem 0;
+  position: relative;
+  top: -2rem;
 }
 
 .paginator .page-number {

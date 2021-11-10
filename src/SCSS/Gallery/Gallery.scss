@@ -1,17 +1,17 @@
 .gallery{
     h1{
-        margin: 3.3rem 0 0 0;
+        margin: 2rem 0 .5rem 0;
     }
-    padding:0 0 2rem 0;
 }
 .images {
     display: flex;
     flex-wrap: wrap;
-    margin:0 auto;
     justify-content: center;
     align-items: center;
     gap:1.2rem;
-    padding:0 2rem;
+    padding:0 0 2rem 0;
+    position: relative;
+    top: -2rem;
     .img-container {
         overflow: hidden;
         height: 20rem;
@@ -41,7 +41,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding:3rem 0 0 0;
+    padding:2rem 0 0 0;
     overflow: hidden;
     transition: min-height .3s;
     transition: height .3s;
@@ -78,12 +78,13 @@
 .show{
     transition: min-height .3s;
     transition: height .3s;
-    min-height: 20vh;
+    min-height: 10vh;
 }
 .hide{
     transition: min-height .3s;
     transition: height .3s;
     height: 0;
+    display: none;
 }
 
 .fullImg{

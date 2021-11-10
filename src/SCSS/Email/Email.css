@@ -10,7 +10,7 @@
 
 .email i {
   color: var(--third);
-  font-size: clamp(1.1rem, 10vw, 4rem);
+  font-size: clamp(1.1rem, 8vw, 3rem);
   cursor: pointer;
   position: fixed;
   bottom: 15px;

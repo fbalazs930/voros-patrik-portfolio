@@ -14,7 +14,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  width: 70vw;
   margin: 0 auto;
 }
 
@@ -22,6 +21,7 @@
   max-width: 949px;
   width: 100%;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .videos .video-container {

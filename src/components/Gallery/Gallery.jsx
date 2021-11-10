@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { FullImg } from './FullImg.jsx';
 import images from './Images.jsx';
 import Paginator from '../Paginator';
+import LazyLoad from 'react-lazyload';
 
 export const Gallery = () => {
 
@@ -103,17 +104,17 @@ export const Gallery = () => {
         else {
             setMobile(false);
         }
-        
-        if(window.innerWidth > 1760){
+
+        if (window.innerWidth > 1760) {
             setPhotoPerPage(12);
         }
-        if(window.innerWidth < 1760){
+        if (window.innerWidth < 1760) {
             setPhotoPerPage(10);
         }
-        if(window.innerWidth < 1530){
+        if (window.innerWidth < 1530) {
             setPhotoPerPage(12);
         }
-        if(window.innerWidth < 940){
+        if (window.innerWidth < 940) {
             setPhotoPerPage(9);
         }
     }
@@ -138,17 +139,17 @@ export const Gallery = () => {
             </div>
 
             <div className="filters show">
-                <div className="top" onClick={() => {setClick2(!click2)}}>
+                <div className="top" onClick={() => { setClick2(!click2) }}>
                     <i className="fas fa-filter"></i>
                     <h2>Szűrés</h2>
                 </div>
                 <div className={click2 ? 'filters show' : 'filters hide'}>
-                        <h2 className="filt" onClick={() => { setFilterFn("all") }}>Mind</h2>
-                        <h2 className="filt" onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
-                        <h2 className="filt" onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
-                        <h2 className="filt" onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
-                        <h2 className="filt" onClick={() => { setFilterFn("landscape") }}>Táj</h2>
-                        <h2 className="filt" onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("all") }}>Mind</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("poDell") }}>Portré / Modell</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("gastro") }}>Gasztro</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("event") }}>Városi rendezvény</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("landscape") }}>Táj</h2>
+                    <h2 className="filt" onClick={() => { setFilterFn("fest") }}>Fesztivál</h2>
                 </div>
                 <br />
                 <br />
@@ -157,11 +158,13 @@ export const Gallery = () => {
 
 
             {mobile ?
-                 <>
+                <>
                     <div className="mobileGallery">
                         <h1>{selected}</h1>
                         <br />
-                        <FullImg images={array} id={id} />
+                        <LazyLoad>
+                            <FullImg images={array} id={id} />
+                        </LazyLoad>
                     </div>
                 </>
                 :
@@ -169,9 +172,11 @@ export const Gallery = () => {
                     <h1>{selected}</h1>
                     <div className="images">
                         {currentPhotos.map(img => (
-                            <div className="img-container" key={img.id}>
-                                <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
-                            </div>
+                            <LazyLoad>
+                                <div className="img-container" key={img.id}>
+                                    <img src={img.src} alt="kep" onClick={() => clickHandler(img.id)} />
+                                </div>
+                            </LazyLoad>
                         ))}
                     </div>
 

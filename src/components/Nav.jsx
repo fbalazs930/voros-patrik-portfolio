@@ -15,11 +15,10 @@ const Nav = () => {
   return (
     <div className="nav">
       <i className="fas.fa-bars"></i>
-      <Link to="/" className="nav-link">
+      <Link to="/" className="logo">
         <img
           src="https://i.postimg.cc/g0NZ5nqV/VP-logos-white.png"
           alt="logo"
-          className="logo"
         />
       </Link>
 

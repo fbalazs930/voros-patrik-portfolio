@@ -23,16 +23,23 @@
                 font-weight: bold;
                 font-size: clamp(.8rem, 2vw, 1rem);
             }
-            hr{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .hr{
+                width: 85%;
+                margin: 0 auto;
+                background-color: #fafafa;
                 height: 1px;
-                color: rgba(102, 102, 102, 0.815);
-                margin: 1rem 0 1rem 0;
+                margin:0 0 13px 0;
             }
         }
         .own-portrait {
-            width: clamp(20rem, 20vw, 35rem);
+            width: clamp(17rem, 20vw, 35rem);
             height: auto;
             object-fit: contain;
+            border-radius: 20px;
         }
     }
 }
